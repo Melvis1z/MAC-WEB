@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Premium academic research support - thesis coaching, data analysis, proofreading & dissertation guidance in Ghana">
+<title>Melvis Academic Consult — Premium Research Support</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root{--navy:#0a1628;--navy-light:#1a2942;--navy-dark:#050b14;--gold:#d4a547;--gold-light:#e8c875;--gold-dark:#b8872f;--accent:#059669;--accent-light:#10b981;--accent-dark:#047857;--muted:#64748b;--text:#1e293b;--bg:#f8fafc;--white:#fff;--border:#e2e8f0;--gray:#f1f5f9;--shadow:0 10px 30px rgba(0,0,0,.1);--shadow-lg:0 30px 60px rgba(0,0,0,.15);--shadow-xl:0 40px 80px rgba(0,0,0,.2);--transition:all .3s cubic-bezier(.4,0,.2,1);--transition-slow:all .6s cubic-bezier(.4,0,.2,1);--maxw:1320px;--radius:16px}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none;transition:var(--transition)}img{max-width:100%;display:block}ul{list-style:none}button{font-family:inherit;cursor:pointer;border:none;transition:var(--transition)}.container{max-width:var(--maxw);margin:0 auto;padding:0 28px}.preloader{position:fixed;inset:0;background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 50%,var(--navy-light) 100%);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .6s,visibility .6s}.preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}.preloader-content{text-align:center;color:white}.preloader-logo{width:100px;height:100px;border-radius:24px;background:linear-gradient(135deg,var(--gold-light),var(--gold));display:flex;align-items:center;justify-content:center;margin:0 auto 28px;animation:logoFloat 2s ease-in-out infinite;box-shadow:0 20px 60px rgba(212,165,71,.5);position:relative}.preloader-logo i{font-size:3rem;position:relative;z-index:2}@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}.preloader-text{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,var(--gold-light),var(--white));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:20px}.preloader-subtitle{font-size:.95rem;color:rgba(255,255,255,.7);margin-bottom:32px}.preloader-bar{width:240px;height:4px;background:rgba(255,255,255,.15);border-radius:4px;overflow:hidden;margin:0 auto}.preloader-progress{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light),var(--accent));border-radius:4px;animation:loadingBar 1.8s cubic-bezier(.4,0,.2,1) infinite}@keyframes loadingBar{0%{width:0;margin-left:0}50%{width:70%;margin-left:0}100%{width:0;margin-left:100%}}header{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 50%,var(--navy-light) 100%);color:white;position:relative;overflow:hidden}.announcement-bar{background:linear-gradient(90deg,var(--gold),var(--accent));padding:10px 0;text-align:center;font-size:.88rem;font-weight:600;color:var(--navy)}.topbar{display:flex;justify-content:space-between;gap:28px;align-items:center;padding:28px 0;flex-wrap:wrap;position:relative;z-index:2}.brand{display:flex;gap:18px;align-items:center;transition:var(--transition)}.brand:hover{transform:translateY(-4px)}.brand img{width:72px;height:72px;border-radius:20px;box-shadow:0 12px 32px rgba(0,0,0,.3);border:3px solid rgba(255,255,255,.2);object-fit:cover}.brand-text h1{font-family:'Playfair Display',serif;font-size:1.65rem;background:linear-gradient(135deg,var(--gold-light),var(--white));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:900;margin-bottom:5px}.brand-tagline{font-size:.95rem;color:rgba(255,255,255,.9)}.quick-contacts{display:flex;gap:16px;flex-wrap:wrap}.contact-pill{display:inline-flex;gap:12px;align-items:center;background:rgba(255,255,255,.12);backdrop-filter:blur(16px);padding:12px 20px;border-radius:100px;border:1.5px solid rgba(255,255,255,.2);transition:var(--transition);font-weight:600;font-size:.92rem}.contact-pill:hover{background:rgba(255,255,255,.2);transform:translateY(-4px);border-color:var(--gold)}nav{position:sticky;top:0;z-index:1000;backdrop-filter:blur(20px);background:rgba(10,22,40,.97);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 4px 32px rgba(0,0,0,.3)}.nav-progress{position:absolute;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--accent));transition:width .1s}.nav-inner{display:flex;gap:32px;align-items:center;justify-content:space-between;padding:20px 0}.nav-brand{display:flex;align-items:center;gap:14px}.nav-brand img{width:44px;height:44px;border-radius:12px}.nav-brand span{font-weight:700;color:var(--gold);font-size:1.15rem;font-family:'Space Grotesk',sans-serif}.nav-links{display:flex;gap:10px;align-items:center}.nav-links a{color:rgba(255,255,255,.95);font-weight:600;padding:12px 22px;border-radius:12px;transition:var(--transition);font-size:.95rem}.nav-links a:hover{background:rgba(255,255,255,.15);color:var(--gold-light)}.cta-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:13px 28px;border-radius:13px;font-weight:700;box-shadow:0 14px 36px rgba(212,165,71,.45)}.cta-primary span{position:relative;z-index:1}.burger{display:none;background:rgba(255,255,255,.14);color:white;font-size:1.5rem;padding:13px 17px;border-radius:13px}.hero{padding:80px 0 60px;background:linear-gradient(135deg,rgba(10,22,40,.97),rgba(26,41,66,.95)),url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=2400') center/cover fixed;color:white;position:relative;min-height:70vh;display:flex;align-items:center;overflow:hidden}#particles{position:absolute;inset:0;pointer-events:none}.hero-inner{display:grid;gap:64px;align-items:center;position:relative;z-index:2}.kicker{display:inline-flex;align-items:center;gap:11px;font-size:.92rem;background:rgba(255,255,255,.16);backdrop-filter:blur(14px);padding:12px 24px;border-radius:100px;margin-bottom:32px;border:1.5px solid rgba(255,255,255,.24);font-weight:600;text-transform:uppercase}.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6.5vw,4.5rem);line-height:1.12;margin-bottom:32px;font-weight:900;background:linear-gradient(135deg,#fff,var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hero-sub{font-size:clamp(1.1rem,2.5vw,1.3rem);color:rgba(255,255,255,.93);margin-bottom:40px;max-width:68ch}.hero-actions{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:40px}.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 34px;border-radius:15px;font-weight:700;font-size:1.03rem;cursor:pointer;transition:var(--transition);box-shadow:var(--shadow)}.btn:hover{transform:translateY(-5px)}.btn i{font-size:1.2rem}.btn-ws{background:linear-gradient(135deg,#25d366,#1ea952);color:white}.btn-ghost{background:rgba(255,255,255,.16);color:white;border:2px solid rgba(255,255,255,.35)}.btn-accent{background:linear-gradient(135deg,var(--accent),#047857);color:white}.hero-stats{display:flex;gap:40px;flex-wrap:wrap}.hero-stat{display:flex;align-items:center;gap:14px;padding:18px 26px;background:rgba(255,255,255,.1);backdrop-filter:blur(14px);border-radius:16px;border:1.5px solid rgba(255,255,255,.18)}.hero-stat-icon{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,var(--gold-light),var(--gold));display:flex;align-items:center;justify-content:center;font-size:1.6rem}.hero-stat-content h4{font-size:1.8rem;font-weight:900;color:var(--gold-light);font-family:'Space Grotesk',sans-serif}.hero-stat-content p{font-size:.88rem;color:rgba(255,255,255,.8)}.hero-card{background:linear-gradient(135deg,#fff,#f8fafc);color:var(--text);border-radius:24px;padding:32px;box-shadow:0 40px 100px rgba(0,0,0,.25);max-width:480px;margin:0 auto;position:relative}.hero-card h4{margin:0 0 8px;font-size:1.45rem;color:var(--navy);font-weight:900;font-family:'Playfair Display',serif}.hero-card-subtitle{color:var(--muted);margin-bottom:20px;font-size:.96rem}.contact-row{display:flex;gap:14px;align-items:center;margin-bottom:14px;padding:14px;border-radius:12px;transition:var(--transition);border:2px solid transparent;background:var(--bg)}.contact-row:hover{background:rgba(212,165,71,.08);transform:translateX(10px);border-color:var(--gold)}.contact-row i{font-size:1.4rem;min-width:36px;text-align:center}.contact-row-content{flex:1}.contact-row-title{font-weight:700;color:var(--navy);font-size:.98rem}.contact-row-subtitle{font-size:.86rem;color:var(--muted)}.hero-card-cta{margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}.trust-bar{background:linear-gradient(135deg,#fff,var(--gray));padding:40px 0;box-shadow:0 -4px 24px rgba(0,0,0,.06),0 4px 24px rgba(0,0,0,.06);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.trust-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}.trust-item{display:flex;align-items:center;gap:16px;padding:20px;border-radius:14px;background:white;border:2px solid var(--border);transition:var(--transition)}.trust-item:hover{transform:translateY(-6px);box-shadow:0 12px 32px rgba(0,0,0,.12);border-color:var(--gold)}.trust-icon{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,var(--gold-light),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem}.trust-title{font-weight:700;color:var(--navy);font-size:1rem;font-family:'Space Grotesk',sans-serif}.trust-subtitle{font-size:.88rem;color:var(--muted)}.stats-section{padding:100px 0;background:linear-gradient(135deg,var(--bg),#e2e8f0,var(--bg))}.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:36px}.stat-card{text-align:center;padding:36px 28px;background:white;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border);transition:all .6s}.stat-card:hover{transform:translateY(-16px);box-shadow:0 28px 64px rgba(0,0,0,.18);border-color:var(--gold)}.stat-icon{width:68px;height:68px;margin:0 auto 20px;border-radius:50%;background:linear-gradient(135deg,var(--gold-light),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:1.9rem}.stat-number{font-size:3.2rem;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-family:'Space Grotesk',sans-serif;margin-bottom:10px}.stat-label{color:var(--muted);font-size:1rem;font-weight:600}.section{padding:80px 0}.section-alternate{background:linear-gradient(135deg,#f1f5f9,var(--bg),#e2e8f0)}.section-head{text-align:center;margin-bottom:72px;max-width:920px;margin-left:auto;margin-right:auto}.section-kicker{display:inline-block;font-size:.92rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;padding:10px 24px;background:rgba(212,165,71,.1);border-radius:100px}.section-title{font-family:'Playfair Display',serif;color:var(--navy);font-size:clamp(2.4rem,5.5vw,3.6rem);margin-bottom:24px;font-weight:900}.section-desc{color:var(--muted);font-size:1.18rem;max-width:740px;margin:32px auto 0;line-height:1.85}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:40px;margin-top:48px}.card{background:white;border-radius:18px;padding:32px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border);transition:all .6s;cursor:pointer}.card:hover{transform:translateY(-18px) scale(1.02);box-shadow:0 32px 72px rgba(0,0,0,.2);border-color:var(--gold)}.card-icon{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,var(--gold-light),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:1.8rem;margin-bottom:22px}.card h3{margin:0 0 16px;color:var(--navy);font-size:1.4rem;font-weight:800;font-family:'Space Grotesk',sans-serif}.card p{color:#475569;margin-bottom:20px;line-height:1.7;font-size:.98rem}.feature-list{padding:0;margin:20px 0 0;color:var(--muted)}.feature-list li{margin:12px 0;display:flex;gap:12px;align-items:flex-start;padding:8px;border-radius:8px}.feature-list i{margin-top:4px;font-size:1.05rem;min-width:18px}.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;margin-top:56px}.why-item{text-align:center;padding:32px 24px;background:white;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border);transition:all .6s}.why-item:hover{transform:translateY(-14px);box-shadow:0 28px 64px rgba(0,0,0,.18);border-color:var(--gold)}.why-icon{width:72px;height:72px;margin:0 auto 20px;border-radius:50%;background:linear-gradient(135deg,#10b981,var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-size:2rem}.why-title{font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:10px;font-family:'Space Grotesk',sans-serif}.why-desc{color:var(--muted);line-height:1.7;font-size:.96rem}.process-timeline{max-width:960px;margin:56px auto;position:relative}.process-step{display:grid;grid-template-columns:1fr 90px 1fr;gap:36px;margin-bottom:56px;align-items:center}.process-step:nth-child(odd) .process-content:first-child{text-align:right}.process-step:nth-child(odd) .process-content:last-child{visibility:hidden}.process-step:nth-child(even) .process-content:first-child{visibility:hidden}.process-step:nth-child(even) .process-content:last-child{text-align:left}.process-content{background:white;padding:28px;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border);transition:all .6s}.process-content:hover{transform:scale(1.06);box-shadow:0 24px 56px rgba(0,0,0,.18);border-color:var(--gold)}.process-number{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,var(--gold-light),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:1.9rem;font-weight:900;font-family:'Space Grotesk',sans-serif;box-shadow:0 12px 32px rgba(212,165,71,.45);border:4px solid white;z-index:10}.process-title{font-size:1.3rem;font-weight:800;color:var(--navy);margin-bottom:10px;font-family:'Space Grotesk',sans-serif}.process-desc{color:var(--muted);line-height:1.65;font-size:.96rem}.testimonials{background:linear-gradient(135deg,#f8fafc,#e2e8f0,#f8fafc);padding:60px 40px;border-radius:24px;margin:72px 0;box-shadow:0 24px 60px rgba(0,0,0,.12)}.testimonial-carousel{max-width:1080px;margin:0 auto;position:relative}.testimonial-track{display:flex;transition:transform .6s;gap:40px}.testimonial-card{min-width:100%;background:white;padding:32px;border-radius:18px;box-shadow:0 16px 48px rgba(0,0,0,.12);border:2px solid var(--border)}.testimonial-rating{display:flex;gap:6px;margin-bottom:18px}.testimonial-rating i{color:var(--gold);font-size:1.15rem}.testimonial-text{font-style:italic;color:var(--text);margin-bottom:22px;line-height:1.75;font-size:1rem}.testimonial-author{display:flex;align-items:center;gap:14px;padding-top:18px;border-top:1.5px solid var(--border)}.testimonial-avatar{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold-light),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:1.4rem;font-weight:700;font-family:'Space Grotesk',sans-serif}.testimonial-name{font-weight:800;color:var(--navy);font-size:1.05rem;font-family:'Space Grotesk',sans-serif}.testimonial-role{font-size:.9rem;color:var(--muted)}.carousel-controls{display:flex;gap:14px;justify-content:center;margin-top:36px}.carousel-btn{width:54px;height:54px;border-radius:50%;background:white;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.3rem;color:var(--navy)}.carousel-btn:hover{background:var(--gold);color:white;transform:scale(1.15)}.carousel-dots{display:flex;gap:10px;justify-content:center;margin-top:24px}.dot{width:11px;height:11px;border-radius:50%;background:var(--border);cursor:pointer}.dot.active{background:var(--gold);width:36px;border-radius:6px}.cta-section{background:linear-gradient(135deg,var(--navy-dark),var(--navy),var(--navy-light));color:white;padding:80px 0;position:relative}.cta-content{text-align:center;max-width:860px;margin:0 auto;position:relative;z-index:2}.cta-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5.5vw,3.4rem);font-weight:900;margin-bottom:28px;background:linear-gradient(135deg,#fff,var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.cta-subtitle{font-size:1.25rem;color:rgba(255,255,255,.93);margin-bottom:44px}.cta-buttons{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}.contact-grid{display:grid;gap:48px}.contact-card{background:white;padding:40px;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.12);border:2px solid var(--border)}.contact-card-title{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:var(--navy);margin-bottom:10px}.contact-card-subtitle{color:var(--muted);font-size:1rem;margin-bottom:28px}label{display:block;font-weight:700;margin-bottom:12px;color:var(--navy);font-size:.98rem}label span{color:#dc2626}input,textarea,select{width:100%;padding:18px 22px;border-radius:14px;border:2px solid var(--border);font-size:1.02rem;background:#fff;font-family:inherit}input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}textarea{min-height:200px;resize:vertical}.form-row{display:grid;gap:28px;margin-bottom:28px}.form-group{margin-bottom:28px}.submit-row{display:flex;gap:20px;align-items:center;margin-top:36px;flex-wrap:wrap}.btn-submit{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:18px 44px;border-radius:14px;font-weight:800;font-size:1.08rem;box-shadow:0 14px 36px rgba(212,165,71,.45);cursor:pointer;min-width:220px;border:none}.btn-submit:hover{transform:translateY(-4px)}.btn-submit i{margin-right:10px}.form-message{padding:22px 28px;border-radius:14px;margin-top:28px;font-weight:600;font-size:1.02rem}.form-message.success{background:#d1fae5;color:#065f46;border:2px solid #a7f3d0}.contact-info-card{background:linear-gradient(135deg,var(--navy-dark),var(--navy),var(--navy-light));color:white;padding:40px;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.25)}.contact-info-card h3{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:900;margin-bottom:22px}.contact-info-item{display:flex;gap:14px;margin-bottom:20px;padding:18px;background:rgba(255,255,255,.1);backdrop-filter:blur(12px);border-radius:12px;border:1.5px solid rgba(255,255,255,.18)}.contact-info-item:hover{background:rgba(255,255,255,.18);transform:translateX(10px);border-color:var(--gold)}.contact-info-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--gold-light),var(--gold));display:flex;align-items:center;justify-content:center;font-size:1.3rem}.contact-info-content h4{font-weight:800;margin-bottom:5px;font-size:1.02rem;font-family:'Space Grotesk',sans-serif}.contact-info-content p{color:rgba(255,255,255,.88);font-size:.94rem}.floating-actions{position:fixed;right:32px;bottom:32px;display:flex;flex-direction:column;gap:20px;z-index:1200}.floating-btn{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 12px 36px rgba(0,0,0,.25);font-size:1.6rem;cursor:pointer}.floating-btn:hover{transform:translateY(-10px) scale(1.15)}.floating-btn.call{background:linear-gradient(135deg,#0ea5a4,#078a89)}.floating-btn.ws{background:linear-gradient(135deg,#25d366,#1ea952)}.floating-btn.mail{background:linear-gradient(135deg,#2563eb,#1e40af)}footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#050b14,var(--navy),#050b14);color:rgba(255,255,255,.9);border-top:1px solid rgba(255,255,255,.12)}.footer-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:52px;margin-bottom:52px}.footer-col h4{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:var(--gold-light);margin-bottom:24px}.footer-links{display:flex;flex-direction:column;gap:14px}.footer-links a{color:rgba(255,255,255,.85);font-weight:500;display:inline-flex;align-items:center;gap:10px;padding:8px 0;font-size:.98rem}.footer-links a:hover{color:var(--gold-light);transform:translateX(8px)}.footer-links a i{font-size:.95rem;min-width:18px}.footer-bottom{padding-top:36px;border-top:1.5px solid rgba(255,255,255,.12);text-align:center}.footer-bottom p{color:rgba(255,255,255,.75);font-size:.98rem}.footer-social{display:flex;gap:18px;justify-content:center;margin-top:28px}.social-link{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem;border:1.5px solid rgba(255,255,255,.18)}.social-link:hover{background:var(--gold);transform:translateY(-6px) scale(1.12)}.reveal{opacity:0;transform:translateY(50px);transition:opacity .9s,transform .9s}.reveal.visible{opacity:1;transform:none}@media (min-width:1024px){.hero-inner{grid-template-columns:1.25fr 1fr}.contact-grid{grid-template-columns:1.4fr 1fr}.form-row{grid-template-columns:1fr 1fr}}@media (max-width:767px){.topbar{flex-direction:column;align-items:flex-start;gap:20px}.quick-contacts{width:100%;gap:12px}.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,22,40,.98);padding:36px 28px;gap:16px}.nav-links.active{display:flex}.burger{display:block}.hero{padding:80px 0 70px}.hero-inner{grid-template-columns:1fr;gap:48px}.hero-actions{flex-direction:column;width:100%}.hero-actions .btn{width:100%;justify-content:center}.stats-grid{grid-template-columns:repeat(2,1fr)}.process-step{grid-template-columns:1fr;gap:20px}.process-step:nth-child(odd) .process-content:first-child{text-align:left;visibility:visible}.process-step:nth-child(odd) .process-content:last-child{display:none}.process-step:nth-child(even) .process-content:first-child{display:none}.process-step:nth-child(even) .process-content:last-child{text-align:left;visibility:visible}.cards{grid-template-columns:1fr}.why-grid{grid-template-columns:1fr}}@media (max-width:480px){.stats-grid{grid-template-columns:1fr}.hero-card{padding:28px 24px}.contact-card,.contact-info-card{padding:36px 28px}}
+</style>
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-logo">
+      <i class="fas fa-graduation-cap"></i>
+    </div>
+    <div class="preloader-text">Melvis Academic Consult</div>
+    <div class="preloader-subtitle">Premium Research Support</div>
+    <div class="preloader-bar">
+      <div class="preloader-progress"></div>
+    </div>
+  </div>
+</div>
+
+<div class="announcement-bar">
+  <i class="fas fa-bolt"></i>
+  <strong>Limited Time:</strong> Get 20% off on all thesis coaching packages this month!
+</div>
+
+<header>
+  <div class="container topbar">
+    <a href="#hero" class="brand">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=200&q=80" alt="Melvis Academic Consult"/>
+      <div class="brand-text">
+        <h1>Melvis Academic Consult</h1>
+        <div class="brand-tagline">Quality Research. Professional Guidance. Timely Delivery.</div>
+      </div>
+    </a>
+    <div class="quick-contacts">
+      <a href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" class="contact-pill" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp" style="color:#25d366"></i>
+        <span>+233 59 865 5277</span>
+      </a>
+      <a href="tel:+233543598656" class="contact-pill">
+        <i class="fas fa-phone"></i>
+        <span>+233 54 359 8656</span>
+      </a>
+      <a href="mailto:melvisongod@gmail.com" class="contact-pill">
+        <i class="fas fa-envelope"></i>
+        <span>melvisongod@gmail.com</span>
+      </a>
+    </div>
+  </div>
+
+  <nav id="navbar">
+    <div class="nav-progress" id="navProgress"></div>
+    <div class="container nav-inner">
+      <div class="nav-brand">
+        <button id="burger" class="burger" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <a href="#hero">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=80&q=60" alt="Melvis"/>
+          <span>Melvis Academic</span>
+        </a>
+      </div>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero">Home</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why Choose Us</a>
+        <a href="#process">Our Process</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank" rel="noopener" class="cta-primary">
+          <i class="fab fa-whatsapp"></i>
+          <span>Instant WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="hero" class="hero">
+    <canvas id="particles"></canvas>
+    <div class="container hero-inner">
+      <div class="hero-left reveal">
+        <div class="kicker">
+          <i class="fas fa-bolt"></i>
+          Fast • Confidential • Professional
+        </div>
+        <h2 class="hero-title">Your Trusted Partner for Thesis, Dissertations & Research Success</h2>
+        <p class="hero-sub">End-to-end academic services including proposal development, data analysis (SPSS/STATA/NVivo), literature review, proofreading and formatting. We prioritize confidentiality and deliver fast results with instant response via WhatsApp and phone.</p>
+        <div class="hero-actions">
+          <a class="btn btn-ws" href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp Now</span>
+          </a>
+          <a class="btn btn-ghost" href="tel:+233543598656">
+            <i class="fas fa-phone"></i>
+            <span>Call +233 54 359 8656</span>
+          </a>
+          <a class="btn btn-accent" href="#contact">
+            <i class="fas fa-envelope"></i>
+            <span>Send Email</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-icon"><i class="fas fa-users"></i></div>
+            <div class="hero-stat-content">
+              <h4>500+</h4>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon"><i class="fas fa-award"></i></div>
+            <div class="hero-stat-content">
+              <h4>98%</h4>
+              <p>Success Rate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal">
+        <h4>Instant Response Options</h4>
+        <p class="hero-card-subtitle">Choose an option below and we will reply quickly.</p>
+        <div class="contact-row">
+          <i class="fab fa-whatsapp" style="color:#25d366"></i>
+          <div class="contact-row-content">
+            <div class="contact-row-title">
+              <a href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank" rel="noopener">WhatsApp: +233 59 865 5277</a>
+            </div>
+            <div class="contact-row-subtitle">Tap to message — preset message ready</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <i class="fas fa-phone" style="color:#0ea5a4"></i>
+          <div class="contact-row-content">
+            <div class="contact-row-title">
+              <a href="tel:+233543598656">Call: +233 54 359 8656</a>
+            </div>
+            <div class="contact-row-subtitle">Quick voice consultation</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <i class="fas fa-envelope" style="color:#2563eb"></i>
+          <div class="contact-row-content">
+            <div class="contact-row-title">
+              <a href="mailto:melvisongod@gmail.com">Email: melvisongod@gmail.com</a>
+            </div>
+            <div class="contact-row-subtitle">Attach brief + documents</div>
+          </div>
+        </div>
+        <div style="margin-top:20px;padding:18px;background:rgba(212,165,71,.08);border-radius:12px;border:2px solid rgba(212,165,71,.2)">
+          <h4 style="color:var(--navy);font-size:1rem;margin-bottom:10px;font-weight:800"><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:8px"></i>Location</h4>
+          <p style="color:var(--text);font-size:.9rem">Okorase State Housing<br>Koforidua, Eastern Region, Ghana</p>
+          <div style="margin-top:14px;padding-top:14px;border-top:1.5px solid rgba(212,165,71,.2)">
+            <p style="color:var(--muted);font-size:.85rem">
+              <strong style="color:var(--navy)">Mon-Fri:</strong> 8:00 AM - 6:00 PM<br>
+              <strong style="color:var(--navy)">Saturday:</strong> 9:00 AM - 4:00 PM<br>
+              <strong style="color:var(--navy)">Sunday:</strong> Emergency support only
+            </p>
+          </div>
+        </div>
+        <div class="hero-card-cta">
+          <a class="btn btn-ws" style="width:100%" href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank" rel="noopener">
+            <i class="fas fa-bolt"></i>
+            <span>Get Instant Quote</span>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item reveal">
+          <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
+          <div>
+            <div class="trust-title">100% Confidential</div>
+            <div class="trust-subtitle">Your data is secure</div>
+          </div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-icon"><i class="fas fa-clock"></i></div>
+          <div>
+            <div class="trust-title">24hr Response</div>
+            <div class="trust-subtitle">Fast turnaround</div>
+          </div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-icon"><i class="fas fa-award"></i></div>
+          <div>
+            <div class="trust-title">98% Success Rate</div>
+            <div class="trust-subtitle">Proven track record</div>
+          </div>
+        </div>
+        <div class="trust-item reveal">
+          <div class="trust-icon"><i class="fas fa-users"></i></div>
+          <div>
+            <div class="trust-title">500+ Projects</div>
+            <div class="trust-subtitle">Students served</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fas fa-bolt"></i></div>
+          <div class="stat-number">24hr</div>
+          <div class="stat-label">Average Response</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Our Expertise</div>
+        <h2 class="section-title">Core Services</h2>
+        <p class="section-desc">We deliver tailored research support for students, scholars and institutions — fast, confidential and academically rigorous.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-book-open"></i></div>
+          <h3>Thesis & Dissertation Coaching</h3>
+          <p>From topic selection to defense preparation — comprehensive supervision, timeline management and milestone tracking.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Proposal development & methodology</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Research design & planning</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Defense preparation coaching</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-spell-check"></i></div>
+          <h3>Proofreading & Academic Editing</h3>
+          <p>Language polish, structural edits, referencing (APA/MLA/Chicago/Harvard) and professional formatting.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Grammar & clarity enhancement</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Citation & reference formatting</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Plagiarism guidance & checks</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Data Analysis & Visualization</h3>
+          <p>Expert analysis using SPSS, STATA, R, Python, SAS, NVivo, EViews and Excel — quantitative & qualitative methods with clear interpretation.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Descriptive & inferential statistics</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Professional tables & charts</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Results interpretation & reporting</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>Research Proposal Development</h3>
+          <p>Problem-driven proposals tailored to institutional guidelines, funding calls and academic standards.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Literature gap identification</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Clear objectives & methodology</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Budget & timeline planning</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3>Academic Workshops & Training</h3>
+          <p>Professional workshops on research methods, academic writing, referencing and data handling for institutions and groups.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Customized training programs</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Interactive sessions</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Certificate of completion</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><i class="fas fa-search"></i></div>
+          <h3>Literature Review Services</h3>
+          <p>Comprehensive literature reviews with critical analysis, synthesis and gap identification for your research.</p>
+          <ul class="feature-list">
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Systematic literature search</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Critical analysis & synthesis</li>
+            <li><i class="fas fa-check" style="color:var(--gold)"></i> Research gap identification</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="section section-alternate">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Why Students Trust Us</div>
+        <h2 class="section-title">Why Choose Melvis Academic Consult</h2>
+        <p class="section-desc">We combine academic excellence with personalized support to ensure your research success.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fas fa-user-tie"></i></div>
+          <h3 class="why-title">Expert Consultants</h3>
+          <p class="why-desc">Ph.D. holders and experienced researchers with deep subject matter expertise across multiple disciplines.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fas fa-tachometer-alt"></i></div>
+          <h3 class="why-title">Fast Turnaround</h3>
+          <p class="why-desc">24-hour response time with flexible deadlines to accommodate urgent academic requirements.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fas fa-lock"></i></div>
+          <h3 class="why-title">100% Confidential</h3>
+          <p class="why-desc">Strict privacy protocols ensure your personal information and research remain completely confidential.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fas fa-certificate"></i></div>
+          <h3 class="why-title">Quality Guaranteed</h3>
+          <p class="why-desc">Rigorous quality checks and unlimited revisions until you're completely satisfied with the results.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fas fa-comments"></i></div>
+          <h3 class="why-title">24/7 Support</h3>
+          <p class="why-desc">Always available via WhatsApp, phone, or email to answer questions and provide guidance.</p>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-icon"><i class="fas fa-money-bill-wave"></i></div>
+          <h3 class="why-title">Affordable Pricing</h3>
+          <p class="why-desc">Competitive rates with flexible payment plans designed for student budgets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">How It Works</div>
+        <h2 class="section-title">Our Process</h2>
+        <p class="section-desc">A simple, transparent process from initial contact to final delivery.</p>
+      </div>
+      <div class="process-timeline">
+        <div class="process-step reveal">
+          <div class="process-content">
+            <h4 class="process-title">Contact Us</h4>
+            <p class="process-desc">Reach out via WhatsApp, phone, or email with your project details and requirements.</p>
+          </div>
+          <div class="process-number">1</div>
+          <div class="process-content">
+            <h4 class="process-title">Contact Us</h4>
+            <p class="process-desc">Reach out via WhatsApp, phone, or email with your project details and requirements.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-content">
+            <h4 class="process-title">Get Quote</h4>
+            <p class="process-desc">Receive a detailed quote within 24 hours outlining scope, timeline, and pricing.</p>
+          </div>
+          <div class="process-number">2</div>
+          <div class="process-content">
+            <h4 class="process-title">Get Quote</h4>
+            <p class="process-desc">Receive a detailed quote within 24 hours outlining scope, timeline, and pricing.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-content">
+            <h4 class="process-title">Begin Work</h4>
+            <p class="process-desc">After agreement, our experts start working on your project with regular updates.</p>
+          </div>
+          <div class="process-number">3</div>
+          <div class="process-content">
+            <h4 class="process-title">Begin Work</h4>
+            <p class="process-desc">After agreement, our experts start working on your project with regular updates.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-content">
+            <h4 class="process-title">Review & Revise</h4>
+            <p class="process-desc">Review the deliverable and request any revisions needed for perfection.</p>
+          </div>
+          <div class="process-number">4</div>
+          <div class="process-content">
+            <h4 class="process-title">Review & Revise</h4>
+            <p class="process-desc">Review the deliverable and request any revisions needed for perfection.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="process-content">
+            <h4 class="process-title">Final Delivery</h4>
+            <p class="process-desc">Receive your polished, ready-to-submit work with all necessary documentation.</p>
+          </div>
+          <div class="process-number">5</div>
+          <div class="process-content">
+            <h4 class="process-title">Final Delivery</h4>
+            <p class="process-desc">Receive your polished, ready-to-submit work with all necessary documentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section section-alternate">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Student Success Stories</div>
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-desc">Read testimonials from students who achieved academic success with our support.</p>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial-carousel">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-card">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">Melvis Academic Consult helped me complete my thesis on time with exceptional SPSS analysis. Their attention to detail and quick responses made all the difference. Highly recommended!</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">AK</div>
+                <div>
+                  <div class="testimonial-name">Akosua Kwarteng</div>
+                  <div class="testimonial-role">MBA Graduate, KNUST</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">The proofreading and formatting service was outstanding. They transformed my dissertation into a polished, professional document. The team is knowledgeable and very supportive.</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">KA</div>
+                <div>
+                  <div class="testimonial-name">Kwame Asante</div>
+                  <div class="testimonial-role">PhD Candidate, UG</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">I was struggling with my research proposal until I found Melvis. They guided me through every step and my proposal was approved on first submission. Thank you!</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">EA</div>
+                <div>
+                  <div class="testimonial-name">Esi Agyemang</div>
+                  <div class="testimonial-role">Masters Student, UCC</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="prevBtn" aria-label="Previous testimonial">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn" id="nextBtn" aria-label="Next testimonial">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to Excel in Your Research?</h2>
+        <p class="cta-subtitle">Get instant support from our expert team. Contact us now for a free consultation and quote.</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank" rel="noopener" class="btn btn-ws">
+            <i class="fab fa-whatsapp"></i>
+            <span>Start WhatsApp Chat</span>
+          </a>
+          <a href="tel:+233543598656" class="btn btn-ghost">
+            <i class="fas fa-phone"></i>
+            <span>Call Now</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Get In Touch</div>
+        <h2 class="section-title">Contact Us</h2>
+        <p class="section-desc">Send us a message and we'll respond within 24 hours. All inquiries are confidential.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <h3 class="contact-card-title">Send Us A Message</h3>
+          <p class="contact-card-subtitle">Fill out the form below and we'll get back to you promptly.</p>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span>*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name"/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span>*</span></label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+233 XX XXX XXXX"/>
+              </div>
+              <div class="form-group">
+                <label for="service">Service Needed <span>*</span></label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option value="thesis">Thesis & Dissertation Coaching</option>
+                  <option value="proofreading">Proofreading & Editing</option>
+                  <option value="data-analysis">Data Analysis</option>
+                  <option value="proposal">Research Proposal</option>
+                  <option value="literature">Literature Review</option>
+                  <option value="workshop">Workshops & Training</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Project Details <span>*</span></label>
+              <textarea id="message" name="message" required placeholder="Please describe your project requirements, deadlines, and any specific needs..."></textarea>
+            </div>
+            <div class="submit-row">
+              <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+              <span style="color:var(--muted);font-size:.95rem">We respond within 24 hours</span>
+            </div>
+            <div id="formMessage"></div>
+          </form>
+        </div>
+
+        <div class="contact-info-card reveal">
+          <h3>Contact Information</h3>
+          <p style="color:rgba(255,255,255,.88);margin-bottom:28px">Prefer to reach out directly? Use any of these channels for instant support.</p>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="contact-info-content">
+              <h4>WhatsApp</h4>
+              <p><a href="https://wa.me/233598655277" target="_blank" rel="noopener">+233 59 865 5277</a></p>
+              <p style="font-size:.88rem;margin-top:5px;opacity:.85">Fastest response — available 24/7</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-info-content">
+              <h4>Phone</h4>
+              <p><a href="tel:+233543598656">+233 54 359 8656</a></p>
+              <p style="font-size:.88rem;margin-top:5px;opacity:.85">Direct voice consultation</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-info-content">
+              <h4>Email</h4>
+              <p><a href="mailto:melvisongod@gmail.com">melvisongod@gmail.com</a></p>
+              <p style="font-size:.88rem;margin-top:5px;opacity:.85">Attach documents & detailed briefs</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-info-content">
+              <h4>Location</h4>
+              <p>Okorase State Housing</p>
+              <p>Koforidua, Eastern Region, Ghana</p>
+            </div>
+          </div>
+          <div style="margin-top:32px;padding-top:32px;border-top:1.5px solid rgba(255,255,255,.18)">
+            <h4 style="margin-bottom:16px;font-size:1.1rem;font-weight:800">Office Hours</h4>
+            <p style="color:rgba(255,255,255,.88);font-size:.94rem;line-height:1.8">
+              <strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM<br>
+              <strong>Saturday:</strong> 9:00 AM - 4:00 PM<br>
+              <strong>Sunday:</strong> Emergency support only
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="floating-actions">
+  <a href="tel:+233543598656" class="floating-btn call" aria-label="Call us">
+    <i class="fas fa-phone"></i>
+  </a>
+  <a href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank" rel="noopener" class="floating-btn ws" aria-label="WhatsApp us">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="mailto:melvisongod@gmail.com" class="floating-btn mail" aria-label="Email us">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col">
+        <h4>Melvis Academic Consult</h4>
+        <p style="color:rgba(255,255,255,.78);line-height:1.85;margin-top:18px;font-size:.98rem">
+          Your trusted partner for academic excellence. We provide comprehensive research support services to students, scholars and institutions across Ghana and beyond.
+        </p>
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="#services"><i class="fas fa-chevron-right"></i> Our Services</a>
+          <a href="#why"><i class="fas fa-chevron-right"></i> Why Choose Us</a>
+          <a href="#process"><i class="fas fa-chevron-right"></i> Our Process</a>
+          <a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a>
+          <a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <div class="footer-links">
+          <a href="#services"><i class="fas fa-chevron-right"></i> Thesis Coaching</a>
+          <a href="#services"><i class="fas fa-chevron-right"></i> Data Analysis</a>
+          <a href="#services"><i class="fas fa-chevron-right"></i> Proofreading</a>
+          <a href="#services"><i class="fas fa-chevron-right"></i> Research Proposals</a>
+          <a href="#services"><i class="fas fa-chevron-right"></i> Literature Reviews</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <div class="footer-links">
+          <a href="https://wa.me/233598655277" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> +233 59 865 5277
+          </a>
+          <a href="tel:+233543598656">
+            <i class="fas fa-phone"></i> +233 54 359 8656
+          </a>
+          <a href="mailto:melvisongod@gmail.com">
+            <i class="fas fa-envelope"></i> melvisongod@gmail.com
+          </a>
+          <a href="#contact">
+            <i class="fas fa-map-marker-alt"></i> Okorase State Housing, Koforidua
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Melvis Academic Consult. All rights reserved.</p>
+      <p style="margin-top:10px;font-size:.9rem;opacity:.85">Empowering Academic Excellence Since 2016</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('preloader').classList.add('hidden');
+  }, 1800);
+});
+
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById('navProgress').style.width = scrolled + '%';
+});
+
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  const icon = burger.querySelector('i');
+  if (navLinks.classList.contains('active')) {
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-times');
+  } else {
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+  }
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    const icon = burger.querySelector('i');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+  });
+});
+
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.vx = (Math.random() - 0.5) * 0.6;
+    this.vy = (Math.random() - 0.5) * 0.6;
+    this.radius = Math.random() * 2.5 + 0.5;
+    this.opacity = Math.random() * 0.5 + 0.2;
+  }
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
+    if (this.x < 0 || this.x > canvas.width) this.vx = -this.vx;
+    if (this.y < 0 || this.y > canvas.height) this.vy = -this.vy;
+  }
+  draw() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(212, 165, 71, ${this.opacity})`;
+    ctx.fill();
+  }
+}
+
+const particles = [];
+for (let i = 0; i < 60; i++) {
+  particles.push(new Particle());
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    p.update();
+    p.draw();
+  });
+  
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
+      const dx = particles[i].x - particles[j].x;
+      const dy = particles[i].y - particles[j].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < 150) {
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(212, 165, 71, ${0.15 * (1 - dist / 150)})`;
+        ctx.lineWidth = 0.5;
+        ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.stroke();
+      }
+    }
+  }
+  
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {threshold: 0.12});
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && href.length > 1) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }
+    }
+  });
+});
+
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(contactForm);
+  const data = Object.fromEntries(formData);
+  
+  formMessage.innerHTML = `
+    <div class="form-message success">
+      <strong>✓ Thank you, ${data.name}!</strong><br>
+      Your message has been received. We'll respond within 24 hours via email or phone. 
+      For urgent matters, please WhatsApp us at <a href="https://wa.me/233598655277" target="_blank" rel="noopener" style="color:#065f46;font-weight:700;text-decoration:underline">+233 59 865 5277</a>.
+    </div>
+  `;
+  
+  contactForm.reset();
+  formMessage.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+  
+  setTimeout(() => {
+    formMessage.innerHTML = '';
+  }, 12000);
+});
+
+let currentSlide = 0;
+const track = document.getElementById('testimonialTrack');
+const slides = track.querySelectorAll('.testimonial-card');
+const totalSlides = slides.length;
+const dotsContainer = document.getElementById('carouselDots');
+
+for (let i = 0; i < totalSlides; i++) {
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+}
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.querySelectorAll('.dot').forEach((dot, index) => {
+    dot.classList.toggle('active', index === currentSlide);
+  });
+}
+
+function goToSlide(n) {
+  currentSlide = n;
+  updateCarousel();
+}
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+  currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+  updateCarousel();
+});
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateCarousel();
+});
+
+let autoSlideInterval = setInterval(() => {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateCarousel();
+}, 6000);
+
+track.addEventListener('mouseenter', () => {
+  clearInterval(autoSlideInterval);
+});
+
+track.addEventListener('mouseleave', () => {
+  autoSlideInterval = setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateCarousel();
+  }, 6000);
+});
+
+const statNumbers = document.querySelectorAll('.stat-number');
+let counterAnimated = false;
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !counterAnimated) {
+      counterAnimated = true;
+      statNumbers.forEach(stat => {
+        const target = stat.textContent;
+        const isPercent = target.includes('%');
+        const isPlus = target.includes('+');
+        const isHr = target.includes('hr');
+        let numTarget = parseInt(target.replace(/\D/g, ''));
+        let count = 0;
+        const increment = numTarget / 60;
+        const updateCount = () => {
+          count += increment;
+          if (count < numTarget) {
+            stat.textContent = Math.ceil(count) + (isPercent ? '%' : isPlus ? '+' : isHr ? 'hr' : '');
+            setTimeout(updateCount, 25);
+          } else {
+            stat.textContent = target;
+          }
+        };
+        updateCount();
+      });
+    }
+  });
+}, {threshold: 0.4});
+
+if (statNumbers.length > 0) {
+  statsObserver.observe(statNumbers[0].closest('.stats-grid'));
+}
+</script>
+</body>
+</html>
