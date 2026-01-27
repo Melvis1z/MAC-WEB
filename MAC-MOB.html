@@ -4,160 +4,207 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Melvis Academic Consult – Premium Research Support</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 :root{--navy:#0a1628;--gold:#d4a547;--accent:#059669;--muted:#64748b;--text:#1e293b;--bg:#f8fafc;--white:#fff;--border:#e2e8f0}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-.container{max-width:1320px;margin:0 auto;padding:0 28px}
+.container{max-width:1320px;margin:0 auto;padding:0 20px}
 
 .page-content{display:none;animation:fadeIn 0.5s}
 .page-content.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
 .preloader{position:fixed;inset:0;background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .6s}
-.preloader.hidden{opacity:0;visibility:hidden}
-.preloader-content{text-align:center;color:white}
-.preloader-logo{width:100px;height:100px;border-radius:24px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;margin:0 auto 28px}
-.preloader-logo i{font-size:3rem}
-.preloader-text{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;margin-bottom:20px}
+.preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.preloader-content{text-align:center;color:white;padding:20px}
+.preloader-logo{width:80px;height:80px;border-radius:20px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.preloader-logo i{font-size:2.5rem}
+.preloader-text{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;margin-bottom:15px}
 
-.announcement-bar{background:linear-gradient(90deg,var(--gold),var(--accent));padding:10px 0;text-align:center;font-size:.88rem;font-weight:600;color:var(--navy)}
+.announcement-bar{background:linear-gradient(90deg,var(--gold),var(--accent));padding:12px 20px;text-align:center;font-size:.85rem;font-weight:600;color:var(--navy);line-height:1.5}
 
 header{background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);color:white;position:relative}
-.topbar{display:flex;justify-content:space-between;gap:28px;align-items:center;padding:28px 0;flex-wrap:wrap}
-.brand{display:flex;gap:18px;align-items:center}
-.brand img{width:72px;height:72px;border-radius:20px}
-.brand-text h1{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:900;margin-bottom:5px}
-.brand-tagline{font-size:.95rem;opacity:.9}
+.topbar{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 0;flex-wrap:wrap}
+.brand{display:flex;gap:15px;align-items:center;flex:1;min-width:200px}
+.brand img{width:60px;height:60px;border-radius:15px;object-fit:cover}
+.brand-text h1{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;margin-bottom:4px;line-height:1.2}
+.brand-tagline{font-size:.85rem;opacity:.9;line-height:1.4}
 
-.quick-contacts{display:flex;gap:16px;flex-wrap:wrap}
-.contact-pill{display:inline-flex;gap:12px;align-items:center;background:rgba(255,255,255,.12);padding:12px 20px;border-radius:100px;border:1.5px solid rgba(255,255,255,.2);font-weight:600;font-size:.92rem}
+.quick-contacts{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;flex:1}
+.contact-pill{display:inline-flex;gap:10px;align-items:center;background:rgba(255,255,255,.12);padding:10px 16px;border-radius:100px;border:1.5px solid rgba(255,255,255,.2);font-weight:600;font-size:.85rem;white-space:nowrap}
+.contact-pill i{font-size:1.1rem}
 
-nav{position:sticky;top:0;z-index:1000;background:rgba(10,22,40,.97);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 4px 32px rgba(0,0,0,.3)}
-.nav-inner{display:flex;gap:32px;align-items:center;justify-content:space-between;padding:20px 0}
-.nav-brand{display:flex;align-items:center;gap:14px}
-.nav-brand img{width:44px;height:44px;border-radius:12px}
-.nav-brand span{font-weight:700;color:var(--gold);font-size:1.15rem}
-.nav-links{display:flex;gap:10px;align-items:center}
-.nav-links a{color:rgba(255,255,255,.95);font-weight:600;padding:12px 22px;border-radius:12px;cursor:pointer;font-size:.95rem}
+nav{position:sticky;top:0;z-index:1000;background:rgba(10,22,40,.97);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 4px 32px rgba(0,0,0,.3);backdrop-filter:blur(10px)}
+.nav-inner{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:15px 0}
+.nav-brand{display:flex;align-items:center;gap:12px}
+.nav-brand img{width:40px;height:40px;border-radius:10px;object-fit:cover}
+.nav-brand span{font-weight:700;color:var(--gold);font-size:1.05rem}
+.nav-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.nav-links a{color:rgba(255,255,255,.95);font-weight:600;padding:10px 18px;border-radius:10px;cursor:pointer;font-size:.9rem;transition:all .3s;white-space:nowrap}
 .nav-links a.active{background:rgba(255,255,255,.15);color:#e8c875}
-.cta-primary{background:linear-gradient(135deg,var(--gold),#e8c875);color:var(--navy);padding:13px 28px;border-radius:13px;font-weight:700}
-.burger{display:none;background:rgba(255,255,255,.14);color:white;font-size:1.5rem;padding:13px 17px;border-radius:13px;min-width:56px}
+.nav-links a:hover{background:rgba(255,255,255,.1)}
+.cta-primary{background:linear-gradient(135deg,var(--gold),#e8c875);color:var(--navy);padding:10px 20px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.burger{display:none;background:rgba(255,255,255,.14);color:white;font-size:1.4rem;padding:10px 14px;border-radius:10px;cursor:pointer;border:none;min-width:48px}
 
-.hero{padding:120px 0 90px;background:linear-gradient(135deg,rgba(10,22,40,.97),rgba(26,41,66,.95)),url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=2400') center/cover;color:white;min-height:90vh;display:flex;align-items:center}
-.hero-inner{display:grid;gap:64px;align-items:center}
-.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6.5vw,4.5rem);line-height:1.12;margin-bottom:32px;font-weight:900}
-.hero-sub{font-size:clamp(1.1rem,2.5vw,1.3rem);margin-bottom:40px;max-width:68ch;line-height:1.8}
-.hero-actions{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:40px}
-.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 34px;border-radius:15px;font-weight:700;font-size:1.03rem;cursor:pointer}
+.hero{padding:80px 0 60px;background:linear-gradient(135deg,rgba(10,22,40,.97),rgba(26,41,66,.95)),url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=2400') center/cover;color:white;min-height:auto;display:flex;align-items:center}
+.hero-inner{display:grid;gap:40px;align-items:center}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4.5rem);line-height:1.15;margin-bottom:24px;font-weight:900}
+.hero-sub{font-size:clamp(1rem,2vw,1.3rem);margin-bottom:30px;line-height:1.7}
+.hero-actions{display:flex;gap:15px;flex-wrap:wrap;margin-bottom:30px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:12px;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .3s;white-space:nowrap}
+.btn:active{transform:scale(.98)}
 .btn-ws{background:linear-gradient(135deg,#25d366,#1ea952);color:white}
 .btn-ghost{background:rgba(255,255,255,.16);color:white;border:2px solid rgba(255,255,255,.35)}
 .btn-accent{background:linear-gradient(135deg,var(--accent),#047857);color:white}
 
-.hero-stats{display:flex;gap:40px;flex-wrap:wrap}
-.hero-stat{display:flex;align-items:center;gap:14px;padding:18px 26px;background:rgba(255,255,255,.1);border-radius:16px;border:1.5px solid rgba(255,255,255,.18)}
-.hero-stat-icon{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;font-size:1.6rem}
-.hero-stat-content h4{font-size:1.8rem;font-weight:900;color:#e8c875;margin-bottom:4px}
-.hero-stat-content p{font-size:.88rem}
+.hero-stats{display:flex;gap:20px;flex-wrap:wrap}
+.hero-stat{display:flex;align-items:center;gap:12px;padding:15px 20px;background:rgba(255,255,255,.1);border-radius:14px;border:1.5px solid rgba(255,255,255,.18);flex:1;min-width:160px}
+.hero-stat-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.hero-stat-content h4{font-size:1.6rem;font-weight:900;color:#e8c875;margin-bottom:3px}
+.hero-stat-content p{font-size:.82rem}
 
-.hero-card{background:white;color:var(--text);border-radius:28px;padding:44px;box-shadow:0 40px 100px rgba(0,0,0,.25);max-width:560px;margin:0 auto}
-.hero-card h4{font-size:1.65rem;color:var(--navy);font-weight:900;margin-bottom:10px}
-.hero-card-subtitle{color:var(--muted);margin-bottom:28px;font-size:1.02rem}
-.contact-row{display:flex;gap:18px;align-items:center;margin-bottom:20px;padding:18px;border-radius:16px;background:var(--bg)}
-.contact-row i{font-size:1.7rem;min-width:40px;text-align:center}
-.contact-row-title{font-weight:700;color:var(--navy);margin-bottom:5px;font-size:1.05rem}
-.contact-row-subtitle{font-size:.92rem;color:var(--muted)}
+.hero-card{background:white;color:var(--text);border-radius:24px;padding:32px;box-shadow:0 40px 100px rgba(0,0,0,.25);max-width:560px;margin:0 auto}
+.hero-card h4{font-size:1.5rem;color:var(--navy);font-weight:900;margin-bottom:8px}
+.hero-card-subtitle{color:var(--muted);margin-bottom:24px;font-size:.95rem}
+.contact-row{display:flex;gap:14px;align-items:center;margin-bottom:16px;padding:14px;border-radius:14px;background:var(--bg);transition:all .3s}
+.contact-row:active{transform:scale(.98)}
+.contact-row i{font-size:1.5rem;min-width:36px;text-align:center;flex-shrink:0}
+.contact-row-title{font-weight:700;color:var(--navy);margin-bottom:4px;font-size:.95rem}
+.contact-row-subtitle{font-size:.85rem;color:var(--muted)}
 
-.section{padding:110px 0}
-.section-head{text-align:center;margin-bottom:72px}
-.section-kicker{display:inline-block;font-size:.92rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;padding:10px 24px;background:rgba(212,165,71,.1);border-radius:100px}
-.section-title{font-family:'Playfair Display',serif;color:var(--navy);font-size:clamp(2.4rem,5.5vw,3.6rem);margin-bottom:24px;font-weight:900}
-.section-desc{color:var(--muted);font-size:1.18rem;max-width:740px;margin:32px auto 0;line-height:1.85}
+.section{padding:80px 0}
+.section-head{text-align:center;margin-bottom:60px}
+.section-kicker{display:inline-block;font-size:.85rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:15px;padding:8px 20px;background:rgba(212,165,71,.1);border-radius:100px}
+.section-title{font-family:'Playfair Display',serif;color:var(--navy);font-size:clamp(2rem,4.5vw,3.6rem);margin-bottom:20px;font-weight:900;line-height:1.2}
+.section-desc{color:var(--muted);font-size:clamp(.95rem,2vw,1.18rem);max-width:740px;margin:20px auto 0;line-height:1.75}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:40px}
-.card{background:white;border-radius:20px;padding:44px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border)}
-.card-icon{width:72px;height:72px;border-radius:18px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;color:white;font-size:2rem;margin-bottom:28px}
-.card h3{margin:0 0 20px;color:var(--navy);font-size:1.6rem;font-weight:800}
-.card p{color:#475569;margin-bottom:28px;line-height:1.8}
-.feature-list{padding:0;margin:28px 0 0;color:var(--muted)}
-.feature-list li{margin:16px 0;display:flex;gap:16px;align-items:flex-start}
-.feature-list i{margin-top:6px;font-size:1.15rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.card{background:white;border-radius:18px;padding:32px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border);transition:all .3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.card-icon{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;color:white;font-size:1.8rem;margin-bottom:24px}
+.card h3{margin:0 0 16px;color:var(--navy);font-size:1.4rem;font-weight:800;line-height:1.3}
+.card p{color:#475569;margin-bottom:20px;line-height:1.7;font-size:.95rem}
+.feature-list{padding:0;margin:20px 0 0;color:var(--muted);list-style:none}
+.feature-list li{margin:12px 0;display:flex;gap:12px;align-items:flex-start;font-size:.9rem}
+.feature-list i{margin-top:4px;font-size:1rem;flex-shrink:0}
 
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px}
-.why-item{text-align:center;padding:40px 32px;background:white;border-radius:20px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border)}
-.why-icon{width:88px;height:88px;margin:0 auto 28px;border-radius:50%;background:linear-gradient(135deg,#10b981,var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-size:2.4rem}
-.why-title{font-size:1.4rem;font-weight:800;color:var(--navy);margin-bottom:14px}
-.why-desc{color:var(--muted);line-height:1.8}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
+.why-item{text-align:center;padding:32px 24px;background:white;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border);transition:all .3s}
+.why-item:hover{transform:translateY(-5px)}
+.why-icon{width:76px;height:76px;margin:0 auto 24px;border-radius:50%;background:linear-gradient(135deg,#10b981,var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-size:2rem}
+.why-title{font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:12px}
+.why-desc{color:var(--muted);line-height:1.7;font-size:.92rem}
 
-.process-timeline{max-width:960px;margin:56px auto}
-.process-step{margin-bottom:56px}
-.process-content{background:white;padding:36px;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border)}
-.process-number{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;color:white;font-size:2.2rem;font-weight:900;margin:0 auto 20px}
-.process-title{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:14px}
-.process-desc{color:var(--muted);line-height:1.75}
+.process-timeline{max-width:860px;margin:48px auto}
+.process-step{margin-bottom:48px}
+.process-content{background:white;padding:28px;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border)}
+.process-number{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;color:white;font-size:2rem;font-weight:900;margin:0 auto 16px}
+.process-title{font-size:1.35rem;font-weight:800;color:var(--navy);margin-bottom:12px}
+.process-desc{color:var(--muted);line-height:1.7;font-size:.95rem}
 
-.testimonials{background:linear-gradient(135deg,#f8fafc,#e2e8f0,#f8fafc);padding:90px 48px;border-radius:28px;margin:72px 0}
-.testimonial-card{background:white;padding:40px;border-radius:20px;box-shadow:0 16px 48px rgba(0,0,0,.12);border:2px solid var(--border);margin-bottom:32px}
-.testimonial-rating{display:flex;gap:7px;margin-bottom:24px}
-.testimonial-rating i{color:var(--gold);font-size:1.3rem}
-.testimonial-text{font-style:italic;color:var(--text);margin-bottom:28px;line-height:1.9}
-.testimonial-author{display:flex;align-items:center;gap:18px;padding-top:24px;border-top:1.5px solid var(--border)}
-.testimonial-avatar{width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;color:white;font-size:1.6rem;font-weight:700}
-.testimonial-name{font-weight:800;color:var(--navy);font-size:1.1rem;margin-bottom:5px}
-.testimonial-role{font-size:.95rem;color:var(--muted)}
+.testimonials{background:linear-gradient(135deg,#f8fafc,#e2e8f0,#f8fafc);padding:60px 24px;border-radius:24px;margin:60px 0}
+.testimonial-card{background:white;padding:32px;border-radius:18px;box-shadow:0 16px 48px rgba(0,0,0,.12);border:2px solid var(--border);margin-bottom:28px}
+.testimonial-rating{display:flex;gap:6px;margin-bottom:20px}
+.testimonial-rating i{color:var(--gold);font-size:1.2rem}
+.testimonial-text{font-style:italic;color:var(--text);margin-bottom:24px;line-height:1.8;font-size:.95rem}
+.testimonial-author{display:flex;align-items:center;gap:16px;padding-top:20px;border-top:1.5px solid var(--border)}
+.testimonial-avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;color:white;font-size:1.4rem;font-weight:700;flex-shrink:0}
+.testimonial-name{font-weight:800;color:var(--navy);font-size:1.05rem;margin-bottom:4px}
+.testimonial-role{font-size:.88rem;color:var(--muted)}
 
-.cta-section{background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);color:white;padding:110px 0}
-.cta-content{text-align:center;max-width:860px;margin:0 auto}
-.cta-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5.5vw,3.4rem);font-weight:900;margin-bottom:28px}
-.cta-subtitle{font-size:1.25rem;margin-bottom:44px;line-height:1.75}
-.cta-buttons{display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+.cta-section{background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);color:white;padding:80px 0}
+.cta-content{text-align:center;max-width:860px;margin:0 auto;padding:0 20px}
+.cta-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4.5vw,3.4rem);font-weight:900;margin-bottom:24px;line-height:1.2}
+.cta-subtitle{font-size:clamp(.95rem,2vw,1.25rem);margin-bottom:36px;line-height:1.7}
+.cta-buttons{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
 
-.contact-grid{display:grid;gap:48px}
-.contact-card{background:white;padding:52px;border-radius:24px;box-shadow:0 24px 60px rgba(0,0,0,.12);border:2px solid var(--border)}
-.contact-card-title{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--navy);margin-bottom:14px}
-label{display:block;font-weight:700;margin-bottom:12px;color:var(--navy)}
+.contact-grid{display:grid;gap:40px}
+.contact-card{background:white;padding:36px;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.12);border:2px solid var(--border)}
+.contact-card-title{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:var(--navy);margin-bottom:12px;line-height:1.2}
+label{display:block;font-weight:700;margin-bottom:10px;color:var(--navy);font-size:.92rem}
 label span{color:#dc2626}
-input,textarea,select{width:100%;padding:18px 22px;border-radius:14px;border:2px solid var(--border);font-size:1.02rem;font-family:inherit}
-input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
-textarea{min-height:200px;resize:vertical}
-.form-row{display:grid;gap:28px;margin-bottom:28px}
-.form-group{margin-bottom:28px}
-.btn-submit{background:linear-gradient(135deg,var(--gold),#e8c875);color:var(--navy);padding:18px 44px;border-radius:14px;font-weight:800;font-size:1.08rem;cursor:pointer;border:none}
-.form-message{padding:22px 28px;border-radius:14px;margin-top:28px;font-weight:600}
+input,textarea,select{width:100%;padding:14px 18px;border-radius:12px;border:2px solid var(--border);font-size:.95rem;font-family:inherit;transition:all .3s}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,165,71,.1)}
+textarea{min-height:180px;resize:vertical}
+.form-row{display:grid;gap:24px;margin-bottom:24px}
+.form-group{margin-bottom:24px}
+.btn-submit{background:linear-gradient(135deg,var(--gold),#e8c875);color:var(--navy);padding:16px 36px;border-radius:12px;font-weight:800;font-size:1.02rem;cursor:pointer;border:none;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:all .3s}
+.btn-submit:active{transform:scale(.98)}
+.form-message{padding:18px 24px;border-radius:12px;margin-top:24px;font-weight:600;font-size:.92rem}
 .form-message.success{background:#d1fae5;color:#065f46;border:2px solid #a7f3d0}
 
-.contact-info-card{background:linear-gradient(135deg,#050b14,#0a1628);color:white;padding:52px;border-radius:24px}
-.contact-info-item{display:flex;gap:18px;margin-bottom:28px;padding:22px;background:rgba(255,255,255,.1);border-radius:14px}
-.contact-info-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+.contact-info-card{background:linear-gradient(135deg,#050b14,#0a1628);color:white;padding:36px;border-radius:20px}
+.contact-info-card h3{font-size:1.5rem;margin-bottom:8px}
+.contact-info-item{display:flex;gap:14px;margin-bottom:24px;padding:18px;background:rgba(255,255,255,.1);border-radius:12px}
+.contact-info-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.contact-info-item h4{font-size:1.05rem;margin-bottom:6px}
+.contact-info-item p{font-size:.9rem;opacity:.9;line-height:1.5}
 
-.floating-actions{position:fixed;right:32px;bottom:32px;display:flex;flex-direction:column;gap:20px;z-index:1200}
-.floating-btn{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 12px 36px rgba(0,0,0,.25);font-size:1.6rem;cursor:pointer}
+.floating-actions{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:16px;z-index:1200}
+.floating-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:1.4rem;cursor:pointer;transition:all .3s}
+.floating-btn:active{transform:scale(.95)}
 .floating-btn.call{background:linear-gradient(135deg,#0ea5a4,#078a89)}
 .floating-btn.ws{background:linear-gradient(135deg,#25d366,#1ea952)}
 .floating-btn.mail{background:linear-gradient(135deg,#2563eb,#1e40af)}
 
-footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#050b14,#0a1628,#050b14);color:rgba(255,255,255,.9)}
-.footer-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:52px;margin-bottom:52px}
-.footer-col h4{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:#e8c875;margin-bottom:24px}
-.footer-links{display:flex;flex-direction:column;gap:14px}
-.footer-links a{color:rgba(255,255,255,.85);font-weight:500}
-.footer-bottom{padding-top:36px;border-top:1.5px solid rgba(255,255,255,.12);text-align:center}
-.footer-social{display:flex;gap:18px;justify-content:center;margin-top:28px}
-.social-link{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:white;font-size:1.3rem}
+footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#050b14,#0a1628,#050b14);color:rgba(255,255,255,.9)}
+.footer-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;margin-bottom:44px}
+.footer-col h4{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:#e8c875;margin-bottom:20px}
+.footer-links{display:flex;flex-direction:column;gap:12px}
+.footer-links a{color:rgba(255,255,255,.85);font-weight:500;font-size:.9rem;display:flex;align-items:center;gap:8px;transition:all .3s}
+.footer-links a:hover{color:#e8c875}
+.footer-links i{font-size:.8rem}
+.footer-bottom{padding-top:32px;border-top:1.5px solid rgba(255,255,255,.12);text-align:center;font-size:.88rem}
+.footer-social{display:flex;gap:14px;justify-content:center;margin-top:24px}
+.social-link{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:white;font-size:1.2rem;transition:all .3s}
+.social-link:hover{background:rgba(255,255,255,.2)}
 
-@media (min-width:1024px){.hero-inner{grid-template-columns:1.25fr 1fr}.contact-grid{grid-template-columns:1.4fr 1fr}.form-row{grid-template-columns:1fr 1fr}}
+@media (min-width:1024px){
+.hero-inner{grid-template-columns:1.25fr 1fr}
+.contact-grid{grid-template-columns:1.4fr 1fr}
+.form-row{grid-template-columns:1fr 1fr}
+}
+
 @media (max-width:767px){
-.topbar{flex-direction:column;align-items:flex-start}
+.container{padding:0 16px}
+.topbar{flex-direction:column;align-items:flex-start;padding:16px 0;gap:16px}
+.brand{width:100%}
+.brand img{width:50px;height:50px}
+.brand-text h1{font-size:1.15rem}
+.brand-tagline{font-size:.8rem}
+.quick-contacts{width:100%;justify-content:flex-start;gap:10px}
+.contact-pill{padding:8px 12px;font-size:.8rem;flex:1;min-width:0;justify-content:center}
+.contact-pill span{display:none}
+.contact-pill i{font-size:1.2rem}
+
 .burger{display:block}
-.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,22,40,.98);padding:36px 28px}
+.nav-inner{padding:12px 0}
+.nav-brand img{width:36px;height:36px}
+.nav-brand span{font-size:.95rem}
+.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,22,40,.98);padding:24px 16px;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
 .nav-links.active{display:flex}
-.hero{padding:80px 0 70px}
-.hero-inner{grid-template-columns:1fr}
+.nav-links a{width:100%;padding:12px 16px;text-align:center}
+.cta-primary{justify-content:center}
+
+.hero{padding:60px 0 50px}
+.hero-inner{grid-template-columns:1fr;gap:32px}
+.hero-actions{flex-direction:column;gap:12px}
+.btn{width:100%;justify-content:center}
+.hero-stats{flex-direction:column;gap:16px}
+.hero-stat{width:100%}
+.hero-card{padding:24px}
+
+.section{padding:60px 0}
 .cards{grid-template-columns:1fr}
 .why-grid{grid-template-columns:1fr}
+.testimonials{padding:40px 16px}
+.cta-buttons{flex-direction:column}
+.contact-grid{grid-template-columns:1fr}
+.floating-actions{right:16px;bottom:16px}
+.floating-btn{width:52px;height:52px}
 }
 </style>
 </head>
@@ -166,28 +213,25 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
 <div class="preloader" id="preloader">
   <div class="preloader-content">
     <div class="preloader-logo"><i class="fas fa-graduation-cap"></i></div>
-    <div class="preloader-text">Melvis Academic Consult</div>
+    <div class="preloader-text">Melvis Academic</div>
   </div>
 </div>
 
 <div class="announcement-bar">
-  <i class="fas fa-bolt"></i>
-  <strong>Limited Time:</strong> Get 20% off on all thesis coaching packages this month!
+  <i class="fas fa-bolt"></i> <strong>Limited Time:</strong> Get 20% off on all thesis coaching!
 </div>
 
 <header>
   <div class="container topbar">
     <a href="javascript:void(0)" onclick="showPage('home')" class="brand">
-      <div class="brand-img-wrapper">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=200&q=80" alt="Melvis"/>
-      </div>
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=200&q=80" alt="Melvis"/>
       <div class="brand-text">
         <h1>Melvis Academic Consult</h1>
-        <div class="brand-tagline">Quality Research. Professional Guidance. Timely Delivery.</div>
+        <div class="brand-tagline">Quality Research. Professional Guidance.</div>
       </div>
     </a>
     <div class="quick-contacts">
-      <a href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" class="contact-pill" target="_blank">
+      <a href="https://wa.me/233598655277" class="contact-pill" target="_blank">
         <i class="fab fa-whatsapp" style="color:#25d366"></i>
         <span>+233 59 865 5277</span>
       </a>
@@ -202,52 +246,47 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
     </div>
   </div>
 
-  <nav id="navbar">
+  <nav>
     <div class="container nav-inner">
       <div class="nav-brand">
         <button id="burger" class="burger"><i class="fas fa-bars"></i></button>
         <a href="javascript:void(0)" onclick="showPage('home')">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=80&q=60" alt="Melvis"/>
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=80&q=60" alt="M"/>
           <span>Melvis Academic</span>
         </a>
       </div>
       <div class="nav-links" id="navLinks">
         <a href="javascript:void(0)" onclick="showPage('home')" data-page="home" class="active">Home</a>
         <a href="javascript:void(0)" onclick="showPage('services')" data-page="services">Services</a>
-        <a href="javascript:void(0)" onclick="showPage('why')" data-page="why">Why Choose Us</a>
-        <a href="javascript:void(0)" onclick="showPage('process')" data-page="process">Our Process</a>
-        <a href="javascript:void(0)" onclick="showPage('testimonials')" data-page="testimonials">Testimonials</a>
+        <a href="javascript:void(0)" onclick="showPage('why')" data-page="why">Why Us</a>
+        <a href="javascript:void(0)" onclick="showPage('process')" data-page="process">Process</a>
+        <a href="javascript:void(0)" onclick="showPage('testimonials')" data-page="testimonials">Reviews</a>
         <a href="javascript:void(0)" onclick="showPage('contact')" data-page="contact">Contact</a>
-        <a href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank" class="cta-primary">
-          <i class="fab fa-whatsapp"></i>
-          <span>Instant WhatsApp</span>
+        <a href="https://wa.me/233598655277" target="_blank" class="cta-primary">
+          <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
         </a>
       </div>
     </div>
   </nav>
 </header>
 
-<main id="mainContent">
+<main>
 
-<!-- HOME PAGE -->
 <div id="home-page" class="page-content active">
   <section class="hero">
     <div class="container hero-inner">
-      <div class="hero-left">
+      <div>
         <h2 class="hero-title">Your Trusted Partner for Thesis, Dissertations & Research Success</h2>
         <p class="hero-sub">End-to-end academic services including proposal development, data analysis (SPSS/STATA/NVivo), literature review, proofreading and formatting.</p>
         <div class="hero-actions">
-          <a class="btn btn-ws" href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-            <span>WhatsApp Now</span>
+          <a class="btn btn-ws" href="https://wa.me/233598655277" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp Now
           </a>
           <a class="btn btn-ghost" href="tel:+233543598656">
-            <i class="fas fa-phone"></i>
-            <span>Call +233 54 359 8656</span>
+            <i class="fas fa-phone"></i> Call Us
           </a>
           <a class="btn btn-accent" href="javascript:void(0)" onclick="showPage('contact')">
-            <i class="fas fa-envelope"></i>
-            <span>Send Email</span>
+            <i class="fas fa-envelope"></i> Email
           </a>
         </div>
         <div class="hero-stats">
@@ -270,32 +309,32 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
 
       <aside class="hero-card">
         <h4>Instant Response Options</h4>
-        <p class="hero-card-subtitle">Choose an option below and we will reply quickly.</p>
+        <p class="hero-card-subtitle">Choose an option below for quick support.</p>
         <div class="contact-row">
           <i class="fab fa-whatsapp" style="color:#25d366"></i>
-          <div class="contact-row-content">
+          <div>
             <div class="contact-row-title">
-              <a href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank">WhatsApp: +233 59 865 5277</a>
+              <a href="https://wa.me/233598655277" target="_blank">+233 59 865 5277</a>
             </div>
-            <div class="contact-row-subtitle">Tap to message — preset message ready</div>
+            <div class="contact-row-subtitle">Tap to message instantly</div>
           </div>
         </div>
         <div class="contact-row">
           <i class="fas fa-phone" style="color:#0ea5a4"></i>
-          <div class="contact-row-content">
+          <div>
             <div class="contact-row-title">
-              <a href="tel:+233543598656">Call: +233 54 359 8656</a>
+              <a href="tel:+233543598656">+233 54 359 8656</a>
             </div>
             <div class="contact-row-subtitle">Quick voice consultation</div>
           </div>
         </div>
         <div class="contact-row">
           <i class="fas fa-envelope" style="color:#2563eb"></i>
-          <div class="contact-row-content">
+          <div>
             <div class="contact-row-title">
-              <a href="mailto:melvisongod@gmail.com">Email: melvisongod@gmail.com</a>
+              <a href="mailto:melvisongod@gmail.com">melvisongod@gmail.com</a>
             </div>
-            <div class="contact-row-subtitle">Attach brief + documents</div>
+            <div class="contact-row-subtitle">Attach documents</div>
           </div>
         </div>
       </aside>
@@ -303,7 +342,6 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
   </section>
 </div>
 
-<!-- SERVICES PAGE -->
 <div id="services-page" class="page-content">
   <section class="section">
     <div class="container">
@@ -378,7 +416,6 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
   </section>
 </div>
 
-<!-- WHY CHOOSE US PAGE -->
 <div id="why-page" class="page-content">
   <section class="section">
     <div class="container">
@@ -423,7 +460,6 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
   </section>
 </div>
 
-<!-- PROCESS PAGE -->
 <div id="process-page" class="page-content">
   <section class="section">
     <div class="container">
@@ -473,7 +509,6 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
   </section>
 </div>
 
-<!-- TESTIMONIALS PAGE -->
 <div id="testimonials-page" class="page-content">
   <section class="section">
     <div class="container">
@@ -485,16 +520,12 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
       <div class="testimonials">
         <div class="testimonial-card">
           <div class="testimonial-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
           <p class="testimonial-text">Melvis Academic Consult helped me complete my thesis on time with exceptional SPSS analysis. Their attention to detail and quick responses made all the difference. Highly recommended!</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">AK</div>
-            <div class="testimonial-info">
+            <div>
               <div class="testimonial-name">Akosua Kwarteng</div>
               <div class="testimonial-role">MBA Graduate, KNUST</div>
             </div>
@@ -502,16 +533,12 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
         </div>
         <div class="testimonial-card">
           <div class="testimonial-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
           <p class="testimonial-text">The proofreading and formatting service was outstanding. They transformed my dissertation into a polished, professional document. The team is knowledgeable and very supportive.</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">KA</div>
-            <div class="testimonial-info">
+            <div>
               <div class="testimonial-name">Kwame Asante</div>
               <div class="testimonial-role">PhD Candidate, UG</div>
             </div>
@@ -519,16 +546,12 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
         </div>
         <div class="testimonial-card">
           <div class="testimonial-rating">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
           </div>
           <p class="testimonial-text">I was struggling with my research proposal until I found Melvis. They guided me through every step and my proposal was approved on first submission. Thank you!</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">EA</div>
-            <div class="testimonial-info">
+            <div>
               <div class="testimonial-name">Esi Agyemang</div>
               <div class="testimonial-role">Masters Student, UCC</div>
             </div>
@@ -539,7 +562,6 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
   </section>
 </div>
 
-<!-- CONTACT PAGE -->
 <div id="contact-page" class="page-content">
   <section class="section">
     <div class="container">
@@ -554,40 +576,39 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
           <form id="contactForm">
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Full Name <span>*</span></label>
-                <input type="text" id="name" name="name" required placeholder="Enter your full name"/>
+                <label>Full Name <span>*</span></label>
+                <input type="text" required placeholder="Enter your full name"/>
               </div>
               <div class="form-group">
-                <label for="email">Email Address <span>*</span></label>
-                <input type="email" id="email" name="email" required placeholder="your@email.com"/>
+                <label>Email Address <span>*</span></label>
+                <input type="email" required placeholder="your@email.com"/>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="+233 XX XXX XXXX"/>
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+233 XX XXX XXXX"/>
               </div>
               <div class="form-group">
-                <label for="service">Service Needed <span>*</span></label>
-                <select id="service" name="service" required>
+                <label>Service Needed <span>*</span></label>
+                <select required>
                   <option value="">Select a service</option>
-                  <option value="thesis">Thesis & Dissertation Coaching</option>
-                  <option value="proofreading">Proofreading & Editing</option>
-                  <option value="data-analysis">Data Analysis</option>
-                  <option value="proposal">Research Proposal</option>
-                  <option value="literature">Literature Review</option>
-                  <option value="workshop">Workshops & Training</option>
-                  <option value="other">Other</option>
+                  <option>Thesis & Dissertation Coaching</option>
+                  <option>Proofreading & Editing</option>
+                  <option>Data Analysis</option>
+                  <option>Research Proposal</option>
+                  <option>Literature Review</option>
+                  <option>Workshops & Training</option>
+                  <option>Other</option>
                 </select>
               </div>
             </div>
             <div class="form-group">
-              <label for="message">Project Details <span>*</span></label>
-              <textarea id="message" name="message" required placeholder="Please describe your project requirements, deadlines, and any specific needs..."></textarea>
+              <label>Project Details <span>*</span></label>
+              <textarea required placeholder="Please describe your project requirements, deadlines, and any specific needs..."></textarea>
             </div>
             <button type="submit" class="btn-submit">
-              <i class="fas fa-paper-plane"></i>
-              Send Message
+              <i class="fas fa-paper-plane"></i> Send Message
             </button>
             <div id="formMessage"></div>
           </form>
@@ -634,7 +655,7 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
 
 <div class="floating-actions">
   <a href="tel:+233543598656" class="floating-btn call"><i class="fas fa-phone"></i></a>
-  <a href="https://wa.me/233598655277?text=Hello%20Melvis%20Academic%20Consult" target="_blank" class="floating-btn ws"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://wa.me/233598655277" target="_blank" class="floating-btn ws"><i class="fab fa-whatsapp"></i></a>
   <a href="mailto:melvisongod@gmail.com" class="floating-btn mail"><i class="fas fa-envelope"></i></a>
 </div>
 
@@ -679,7 +700,7 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
           <a href="https://wa.me/233598655277" target="_blank"><i class="fab fa-whatsapp"></i> +233 59 865 5277</a>
           <a href="tel:+233543598656"><i class="fas fa-phone"></i> +233 54 359 8656</a>
           <a href="mailto:melvisongod@gmail.com"><i class="fas fa-envelope"></i> melvisongod@gmail.com</a>
-          <a href="javascript:void(0)" onclick="showPage('contact')"><i class="fas fa-map-marker-alt"></i> Okorase State Housing, Koforidua</a>
+          <a href="javascript:void(0)" onclick="showPage('contact')"><i class="fas fa-map-marker-alt"></i> Okorase State Housing</a>
         </div>
       </div>
     </div>
@@ -691,68 +712,38 @@ footer{margin-top:120px;padding:72px 0 36px;background:linear-gradient(135deg,#0
 </footer>
 
 <script>
-// Preloader
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    document.getElementById('preloader').classList.add('hidden');
-  }, 1500);
+window.addEventListener('load',()=>{
+setTimeout(()=>{document.getElementById('preloader').classList.add('hidden')},1500)
 });
 
-// Mobile menu toggle
-const burger = document.getElementById('burger');
-const navLinks = document.getElementById('navLinks');
-burger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  const icon = burger.querySelector('i');
-  icon.classList.toggle('fa-bars');
-  icon.classList.toggle('fa-times');
+const burger=document.getElementById('burger');
+const navLinks=document.getElementById('navLinks');
+burger.addEventListener('click',()=>{
+navLinks.classList.toggle('active');
+const icon=burger.querySelector('i');
+icon.classList.toggle('fa-bars');
+icon.classList.toggle('fa-times');
 });
 
-// Page navigation function
-function showPage(pageName) {
-  // Hide all pages
-  document.querySelectorAll('.page-content').forEach(page => {
-    page.classList.remove('active');
-  });
-  
-  // Show selected page
-  document.getElementById(pageName + '-page').classList.add('active');
-  
-  // Update nav links active state
-  document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
-    link.classList.remove('active');
-  });
-  document.querySelector(`.nav-links a[data-page="${pageName}"]`)?.classList.add('active');
-  
-  // Close mobile menu if open
-  navLinks.classList.remove('active');
-  burger.querySelector('i').classList.add('fa-bars');
-  burger.querySelector('i').classList.remove('fa-times');
-  
-  // Scroll to top
-  window.scrollTo({top: 0, behavior: 'smooth'});
+function showPage(pageName){
+document.querySelectorAll('.page-content').forEach(page=>page.classList.remove('active'));
+document.getElementById(pageName+'-page').classList.add('active');
+document.querySelectorAll('.nav-links a[data-page]').forEach(link=>link.classList.remove('active'));
+document.querySelector(`.nav-links a[data-page="${pageName}"]`)?.classList.add('active');
+navLinks.classList.remove('active');
+burger.querySelector('i').classList.add('fa-bars');
+burger.querySelector('i').classList.remove('fa-times');
+window.scrollTo({top:0,behavior:'smooth'});
 }
 
-// Contact form
-const contactForm = document.getElementById('contactForm');
-const formMessage = document.getElementById('formMessage');
-contactForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(contactForm);
-  const data = Object.fromEntries(formData);
-  
-  formMessage.innerHTML = `
-    <div class="form-message success">
-      <strong>✓ Thank you, ${data.name}!</strong><br>
-      Your message has been received. We'll respond within 24 hours.
-    </div>
-  `;
-  
-  contactForm.reset();
-  setTimeout(() => {
-    formMessage.innerHTML = '';
-  }, 10000);
+const contactForm=document.getElementById('contactForm');
+const formMessage=document.getElementById('formMessage');
+contactForm.addEventListener('submit',function(e){
+e.preventDefault();
+formMessage.innerHTML='<div class="form-message success"><strong>✓ Thank you!</strong><br>Your message has been received. We\'ll respond within 24 hours.</div>';
+contactForm.reset();
+setTimeout(()=>{formMessage.innerHTML=''},10000);
 });
 </script>
 </body>
-</html>
+</html
