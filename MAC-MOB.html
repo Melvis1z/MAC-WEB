@@ -3,274 +3,1374 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Melvis Academic Consult – Premium Research Support</title>
+<meta name="description" content="Melvis Academic Consult - Premium research support services including thesis coaching, data analysis (SPSS/STATA), proofreading, and dissertation guidance for students and scholars."/>
+<meta name="keywords" content="thesis coaching, dissertation help, data analysis, SPSS, academic editing, research proposal, Ghana"/>
+<meta name="theme-color" content="#0a1628"/>
+<title>Melvis Academic Consult – Premium Research Support & Thesis Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-:root{--navy:#0a1628;--gold:#d4a547;--accent:#059669;--muted:#64748b;--text:#1e293b;--bg:#f8fafc;--white:#fff;--border:#e2e8f0}
+:root{
+  --navy:#0a1628;
+  --navy-light:#1a2942;
+  --gold:#d4a547;
+  --gold-light:#e8c875;
+  --accent:#059669;
+  --accent-dark:#047857;
+  --muted:#64748b;
+  --text:#1e293b;
+  --bg:#f8fafc;
+  --white:#fff;
+  --border:#e2e8f0;
+  --shadow-sm:0 2px 8px rgba(0,0,0,.06);
+  --shadow-md:0 8px 24px rgba(0,0,0,.1);
+  --shadow-lg:0 20px 60px rgba(0,0,0,.15);
+  --shadow-xl:0 40px 100px rgba(0,0,0,.25);
+  --transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
+
+body{
+  font-family:Inter,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+a{color:inherit;text-decoration:none;transition:var(--transition)}
+img{max-width:100%;height:auto;display:block}
+button{font-family:inherit;cursor:pointer}
+
 .container{max-width:1320px;margin:0 auto;padding:0 20px}
 
-.page-content{display:none;animation:fadeIn 0.5s}
+/* Page Transitions */
+.page-content{
+  display:none;
+  animation:fadeInUp 0.6s cubic-bezier(0.4,0,0.2,1);
+}
 .page-content.active{display:block}
-@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-.preloader{position:fixed;inset:0;background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);display:flex;align-items:center;justify-content:center;z-index:9999;transition:opacity .6s}
+@keyframes fadeInUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Preloader */
+.preloader{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  transition:opacity .6s,visibility .6s;
+}
 .preloader.hidden{opacity:0;visibility:hidden;pointer-events:none}
 .preloader-content{text-align:center;color:white;padding:20px}
-.preloader-logo{width:80px;height:80px;border-radius:20px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
-.preloader-logo i{font-size:2.5rem}
-.preloader-text{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;margin-bottom:15px}
+.preloader-logo{
+  width:80px;
+  height:80px;
+  border-radius:20px;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 20px;
+  animation:pulse 2s infinite;
+}
+.preloader-logo i{font-size:2.5rem;color:var(--navy)}
+.preloader-text{
+  font-family:'Playfair Display',serif;
+  font-size:1.5rem;
+  font-weight:900;
+  margin-bottom:15px;
+}
 
-.announcement-bar{background:linear-gradient(90deg,var(--gold),var(--accent));padding:12px 20px;text-align:center;font-size:.85rem;font-weight:600;color:var(--navy);line-height:1.5}
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+}
 
-header{background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);color:white;position:relative}
-.topbar{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:20px 0;flex-wrap:wrap}
-.brand{display:flex;gap:15px;align-items:center;flex:1;min-width:200px}
-.brand img{width:60px;height:60px;border-radius:15px;object-fit:cover}
-.brand-text h1{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;margin-bottom:4px;line-height:1.2}
-.brand-tagline{font-size:.85rem;opacity:.9;line-height:1.4}
+/* Announcement Bar */
+.announcement-bar{
+  background:linear-gradient(90deg,var(--gold),var(--accent));
+  padding:12px 20px;
+  text-align:center;
+  font-size:.85rem;
+  font-weight:600;
+  color:var(--navy);
+  line-height:1.5;
+  position:relative;
+  overflow:hidden;
+}
+.announcement-bar::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);
+  animation:shimmer 3s infinite;
+}
 
-.quick-contacts{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end;flex:1}
-.contact-pill{display:inline-flex;gap:10px;align-items:center;background:rgba(255,255,255,.12);padding:10px 16px;border-radius:100px;border:1.5px solid rgba(255,255,255,.2);font-weight:600;font-size:.85rem;white-space:nowrap}
+@keyframes shimmer{
+  to{left:100%}
+}
+
+/* Header */
+header{
+  background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);
+  color:white;
+  position:relative;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:center;
+  padding:20px 0;
+  flex-wrap:wrap;
+}
+
+.brand{
+  display:flex;
+  gap:15px;
+  align-items:center;
+  flex:1;
+  min-width:200px;
+  transition:var(--transition);
+}
+.brand:hover{opacity:.9}
+.brand img{
+  width:60px;
+  height:60px;
+  border-radius:15px;
+  object-fit:cover;
+  box-shadow:var(--shadow-md);
+}
+.brand-text h1{
+  font-family:'Playfair Display',serif;
+  font-size:1.3rem;
+  font-weight:900;
+  margin-bottom:4px;
+  line-height:1.2;
+}
+.brand-tagline{
+  font-size:.85rem;
+  opacity:.9;
+  line-height:1.4;
+}
+
+.quick-contacts{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  flex:1;
+}
+.contact-pill{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  background:rgba(255,255,255,.12);
+  padding:10px 16px;
+  border-radius:100px;
+  border:1.5px solid rgba(255,255,255,.2);
+  font-weight:600;
+  font-size:.85rem;
+  white-space:nowrap;
+  transition:var(--transition);
+  backdrop-filter:blur(10px);
+}
+.contact-pill:hover{
+  background:rgba(255,255,255,.2);
+  transform:translateY(-2px);
+  border-color:rgba(255,255,255,.3);
+}
 .contact-pill i{font-size:1.1rem}
 
-nav{position:sticky;top:0;z-index:1000;background:rgba(10,22,40,.97);border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 4px 32px rgba(0,0,0,.3);backdrop-filter:blur(10px)}
-.nav-inner{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:15px 0}
-.nav-brand{display:flex;align-items:center;gap:12px}
-.nav-brand img{width:40px;height:40px;border-radius:10px;object-fit:cover}
-.nav-brand span{font-weight:700;color:var(--gold);font-size:1.05rem}
-.nav-links{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.nav-links a{color:rgba(255,255,255,.95);font-weight:600;padding:10px 18px;border-radius:10px;cursor:pointer;font-size:.9rem;transition:all .3s;white-space:nowrap}
-.nav-links a.active{background:rgba(255,255,255,.15);color:#e8c875}
+/* Navigation */
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(10,22,40,.97);
+  border-bottom:1px solid rgba(255,255,255,.12);
+  box-shadow:0 4px 32px rgba(0,0,0,.3);
+  backdrop-filter:blur(10px);
+}
+
+.nav-inner{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 0;
+}
+
+.nav-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  transition:var(--transition);
+}
+.nav-brand:hover{opacity:.9}
+.nav-brand img{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  object-fit:cover;
+}
+.nav-brand span{
+  font-weight:700;
+  color:var(--gold);
+  font-size:1.05rem;
+}
+
+.nav-links{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.nav-links a{
+  color:rgba(255,255,255,.95);
+  font-weight:600;
+  padding:10px 18px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:.9rem;
+  transition:var(--transition);
+  white-space:nowrap;
+  position:relative;
+}
+.nav-links a::after{
+  content:'';
+  position:absolute;
+  bottom:5px;
+  left:50%;
+  transform:translateX(-50%) scaleX(0);
+  width:70%;
+  height:2px;
+  background:var(--gold-light);
+  transition:transform .3s;
+}
+.nav-links a.active{
+  background:rgba(255,255,255,.15);
+  color:var(--gold-light);
+}
+.nav-links a.active::after{transform:translateX(-50%) scaleX(1)}
 .nav-links a:hover{background:rgba(255,255,255,.1)}
-.cta-primary{background:linear-gradient(135deg,var(--gold),#e8c875);color:var(--navy);padding:10px 20px;border-radius:10px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
-.burger{display:none;background:rgba(255,255,255,.14);color:white;font-size:1.4rem;padding:10px 14px;border-radius:10px;cursor:pointer;border:none;min-width:48px}
 
-.hero{padding:80px 0 60px;background:linear-gradient(135deg,rgba(10,22,40,.97),rgba(26,41,66,.95)),url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=2400') center/cover;color:white;min-height:auto;display:flex;align-items:center}
-.hero-inner{display:grid;gap:40px;align-items:center}
-.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,4.5rem);line-height:1.15;margin-bottom:24px;font-weight:900}
-.hero-sub{font-size:clamp(1rem,2vw,1.3rem);margin-bottom:30px;line-height:1.7}
-.hero-actions{display:flex;gap:15px;flex-wrap:wrap;margin-bottom:30px}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:12px;font-weight:700;font-size:.95rem;cursor:pointer;transition:all .3s;white-space:nowrap}
+.cta-primary{
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:var(--navy);
+  padding:10px 20px;
+  border-radius:10px;
+  font-weight:700;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  transition:var(--transition);
+  box-shadow:var(--shadow-sm);
+}
+.cta-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+
+.burger{
+  display:none;
+  background:rgba(255,255,255,.14);
+  color:white;
+  font-size:1.4rem;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  border:none;
+  min-width:48px;
+  transition:var(--transition);
+}
+.burger:hover{background:rgba(255,255,255,.2)}
+
+/* Hero Section */
+.hero{
+  padding:80px 0 60px;
+  background:linear-gradient(135deg,rgba(10,22,40,.97),rgba(26,41,66,.95)),url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=2400') center/cover;
+  color:white;
+  min-height:auto;
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 30% 50%,rgba(212,165,71,.1),transparent 50%);
+  pointer-events:none;
+}
+
+.hero-inner{
+  display:grid;
+  gap:40px;
+  align-items:center;
+  position:relative;
+  z-index:1;
+}
+
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,5vw,4.5rem);
+  line-height:1.15;
+  margin-bottom:24px;
+  font-weight:900;
+  animation:fadeInUp 0.8s .2s backwards;
+}
+
+.hero-sub{
+  font-size:clamp(1rem,2vw,1.3rem);
+  margin-bottom:30px;
+  line-height:1.7;
+  animation:fadeInUp 0.8s .4s backwards;
+}
+
+.hero-actions{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+  animation:fadeInUp 0.8s .6s backwards;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 24px;
+  border-radius:12px;
+  font-weight:700;
+  font-size:.95rem;
+  cursor:pointer;
+  transition:var(--transition);
+  white-space:nowrap;
+  border:none;
+  box-shadow:var(--shadow-sm);
+}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
 .btn:active{transform:scale(.98)}
-.btn-ws{background:linear-gradient(135deg,#25d366,#1ea952);color:white}
-.btn-ghost{background:rgba(255,255,255,.16);color:white;border:2px solid rgba(255,255,255,.35)}
-.btn-accent{background:linear-gradient(135deg,var(--accent),#047857);color:white}
 
-.hero-stats{display:flex;gap:20px;flex-wrap:wrap}
-.hero-stat{display:flex;align-items:center;gap:12px;padding:15px 20px;background:rgba(255,255,255,.1);border-radius:14px;border:1.5px solid rgba(255,255,255,.18);flex:1;min-width:160px}
-.hero-stat-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
-.hero-stat-content h4{font-size:1.6rem;font-weight:900;color:#e8c875;margin-bottom:3px}
+.btn-ws{background:linear-gradient(135deg,#25d366,#1ea952);color:white}
+.btn-ghost{
+  background:rgba(255,255,255,.16);
+  color:white;
+  border:2px solid rgba(255,255,255,.35);
+}
+.btn-accent{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:white}
+
+.hero-stats{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  animation:fadeInUp 0.8s .8s backwards;
+}
+
+.hero-stat{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:15px 20px;
+  background:rgba(255,255,255,.1);
+  border-radius:14px;
+  border:1.5px solid rgba(255,255,255,.18);
+  flex:1;
+  min-width:160px;
+  transition:var(--transition);
+  backdrop-filter:blur(10px);
+}
+.hero-stat:hover{
+  background:rgba(255,255,255,.15);
+  transform:translateY(-3px);
+}
+
+.hero-stat-icon{
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.4rem;
+  flex-shrink:0;
+  color:var(--navy);
+}
+
+.hero-stat-content h4{
+  font-size:1.6rem;
+  font-weight:900;
+  color:var(--gold-light);
+  margin-bottom:3px;
+}
 .hero-stat-content p{font-size:.82rem}
 
-.hero-card{background:white;color:var(--text);border-radius:24px;padding:32px;box-shadow:0 40px 100px rgba(0,0,0,.25);max-width:560px;margin:0 auto}
-.hero-card h4{font-size:1.5rem;color:var(--navy);font-weight:900;margin-bottom:8px}
-.hero-card-subtitle{color:var(--muted);margin-bottom:24px;font-size:.95rem}
-.contact-row{display:flex;gap:14px;align-items:center;margin-bottom:16px;padding:14px;border-radius:14px;background:var(--bg);transition:all .3s}
+.hero-card{
+  background:white;
+  color:var(--text);
+  border-radius:24px;
+  padding:32px;
+  box-shadow:var(--shadow-xl);
+  max-width:560px;
+  margin:0 auto;
+  animation:fadeInUp 0.8s .4s backwards;
+}
+
+.hero-card h4{
+  font-size:1.5rem;
+  color:var(--navy);
+  font-weight:900;
+  margin-bottom:8px;
+}
+
+.hero-card-subtitle{
+  color:var(--muted);
+  margin-bottom:24px;
+  font-size:.95rem;
+}
+
+.contact-row{
+  display:flex;
+  gap:14px;
+  align-items:center;
+  margin-bottom:16px;
+  padding:14px;
+  border-radius:14px;
+  background:var(--bg);
+  transition:var(--transition);
+  cursor:pointer;
+}
+.contact-row:hover{
+  background:#e2e8f0;
+  transform:translateX(5px);
+}
 .contact-row:active{transform:scale(.98)}
-.contact-row i{font-size:1.5rem;min-width:36px;text-align:center;flex-shrink:0}
-.contact-row-title{font-weight:700;color:var(--navy);margin-bottom:4px;font-size:.95rem}
-.contact-row-subtitle{font-size:.85rem;color:var(--muted)}
 
+.contact-row i{
+  font-size:1.5rem;
+  min-width:36px;
+  text-align:center;
+  flex-shrink:0;
+}
+
+.contact-row-title{
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:4px;
+  font-size:.95rem;
+}
+.contact-row-subtitle{
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+/* Sections */
 .section{padding:80px 0}
-.section-head{text-align:center;margin-bottom:60px}
-.section-kicker{display:inline-block;font-size:.85rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:15px;padding:8px 20px;background:rgba(212,165,71,.1);border-radius:100px}
-.section-title{font-family:'Playfair Display',serif;color:var(--navy);font-size:clamp(2rem,4.5vw,3.6rem);margin-bottom:20px;font-weight:900;line-height:1.2}
-.section-desc{color:var(--muted);font-size:clamp(.95rem,2vw,1.18rem);max-width:740px;margin:20px auto 0;line-height:1.75}
+.section-head{
+  text-align:center;
+  margin-bottom:60px;
+  animation:fadeInUp 0.6s backwards;
+}
 
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-.card{background:white;border-radius:18px;padding:32px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border);transition:all .3s}
-.card:hover{transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,.15)}
-.card-icon{width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;color:white;font-size:1.8rem;margin-bottom:24px}
-.card h3{margin:0 0 16px;color:var(--navy);font-size:1.4rem;font-weight:800;line-height:1.3}
-.card p{color:#475569;margin-bottom:20px;line-height:1.7;font-size:.95rem}
-.feature-list{padding:0;margin:20px 0 0;color:var(--muted);list-style:none}
-.feature-list li{margin:12px 0;display:flex;gap:12px;align-items:flex-start;font-size:.9rem}
-.feature-list i{margin-top:4px;font-size:1rem;flex-shrink:0}
+.section-kicker{
+  display:inline-block;
+  font-size:.85rem;
+  font-weight:700;
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  margin-bottom:15px;
+  padding:8px 20px;
+  background:rgba(212,165,71,.1);
+  border-radius:100px;
+  border:1.5px solid rgba(212,165,71,.2);
+}
 
-.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
-.why-item{text-align:center;padding:32px 24px;background:white;border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border);transition:all .3s}
-.why-item:hover{transform:translateY(-5px)}
-.why-icon{width:76px;height:76px;margin:0 auto 24px;border-radius:50%;background:linear-gradient(135deg,#10b981,var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-size:2rem}
-.why-title{font-size:1.25rem;font-weight:800;color:var(--navy);margin-bottom:12px}
-.why-desc{color:var(--muted);line-height:1.7;font-size:.92rem}
+.section-title{
+  font-family:'Playfair Display',serif;
+  color:var(--navy);
+  font-size:clamp(2rem,4.5vw,3.6rem);
+  margin-bottom:20px;
+  font-weight:900;
+  line-height:1.2;
+}
 
-.process-timeline{max-width:860px;margin:48px auto}
-.process-step{margin-bottom:48px}
-.process-content{background:white;padding:28px;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.1);border:2px solid var(--border)}
-.process-number{width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;color:white;font-size:2rem;font-weight:900;margin:0 auto 16px}
-.process-title{font-size:1.35rem;font-weight:800;color:var(--navy);margin-bottom:12px}
-.process-desc{color:var(--muted);line-height:1.7;font-size:.95rem}
+.section-desc{
+  color:var(--muted);
+  font-size:clamp(.95rem,2vw,1.18rem);
+  max-width:740px;
+  margin:20px auto 0;
+  line-height:1.75;
+}
 
-.testimonials{background:linear-gradient(135deg,#f8fafc,#e2e8f0,#f8fafc);padding:60px 24px;border-radius:24px;margin:60px 0}
-.testimonial-card{background:white;padding:32px;border-radius:18px;box-shadow:0 16px 48px rgba(0,0,0,.12);border:2px solid var(--border);margin-bottom:28px}
-.testimonial-rating{display:flex;gap:6px;margin-bottom:20px}
-.testimonial-rating i{color:var(--gold);font-size:1.2rem}
-.testimonial-text{font-style:italic;color:var(--text);margin-bottom:24px;line-height:1.8;font-size:.95rem}
-.testimonial-author{display:flex;align-items:center;gap:16px;padding-top:20px;border-top:1.5px solid var(--border)}
-.testimonial-avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;color:white;font-size:1.4rem;font-weight:700;flex-shrink:0}
-.testimonial-name{font-weight:800;color:var(--navy);font-size:1.05rem;margin-bottom:4px}
-.testimonial-role{font-size:.88rem;color:var(--muted)}
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
 
-.cta-section{background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);color:white;padding:80px 0}
-.cta-content{text-align:center;max-width:860px;margin:0 auto;padding:0 20px}
-.cta-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4.5vw,3.4rem);font-weight:900;margin-bottom:24px;line-height:1.2}
-.cta-subtitle{font-size:clamp(.95rem,2vw,1.25rem);margin-bottom:36px;line-height:1.7}
-.cta-buttons{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.card{
+  background:white;
+  border-radius:18px;
+  padding:32px;
+  box-shadow:var(--shadow-md);
+  border:2px solid var(--border);
+  transition:var(--transition);
+  animation:fadeInUp 0.6s backwards;
+}
+.card:nth-child(1){animation-delay:.1s}
+.card:nth-child(2){animation-delay:.2s}
+.card:nth-child(3){animation-delay:.3s}
+.card:nth-child(4){animation-delay:.4s}
+.card:nth-child(5){animation-delay:.5s}
+.card:nth-child(6){animation-delay:.6s}
 
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--gold);
+}
+
+.card-icon{
+  width:64px;
+  height:64px;
+  border-radius:16px;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:1.8rem;
+  margin-bottom:24px;
+  transition:var(--transition);
+}
+.card:hover .card-icon{transform:scale(1.1) rotate(5deg)}
+
+.card h3{
+  margin:0 0 16px;
+  color:var(--navy);
+  font-size:1.4rem;
+  font-weight:800;
+  line-height:1.3;
+}
+
+.card p{
+  color:#475569;
+  margin-bottom:20px;
+  line-height:1.7;
+  font-size:.95rem;
+}
+
+.feature-list{
+  padding:0;
+  margin:20px 0 0;
+  color:var(--muted);
+  list-style:none;
+}
+
+.feature-list li{
+  margin:12px 0;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  font-size:.9rem;
+  transition:var(--transition);
+}
+.feature-list li:hover{color:var(--text);transform:translateX(3px)}
+.feature-list i{
+  margin-top:4px;
+  font-size:1rem;
+  flex-shrink:0;
+}
+
+/* Why Us Grid */
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:28px;
+}
+
+.why-item{
+  text-align:center;
+  padding:32px 24px;
+  background:white;
+  border-radius:18px;
+  box-shadow:var(--shadow-md);
+  border:2px solid var(--border);
+  transition:var(--transition);
+  animation:fadeInUp 0.6s backwards;
+}
+.why-item:nth-child(1){animation-delay:.1s}
+.why-item:nth-child(2){animation-delay:.2s}
+.why-item:nth-child(3){animation-delay:.3s}
+.why-item:nth-child(4){animation-delay:.4s}
+.why-item:nth-child(5){animation-delay:.5s}
+.why-item:nth-child(6){animation-delay:.6s}
+
+.why-item:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--accent);
+}
+
+.why-icon{
+  width:76px;
+  height:76px;
+  margin:0 auto 24px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#10b981,var(--accent));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:2rem;
+  transition:var(--transition);
+}
+.why-item:hover .why-icon{transform:scale(1.1) rotate(10deg)}
+
+.why-title{
+  font-size:1.25rem;
+  font-weight:800;
+  color:var(--navy);
+  margin-bottom:12px;
+}
+
+.why-desc{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:.92rem;
+}
+
+/* Process Timeline */
+.process-timeline{
+  max-width:860px;
+  margin:48px auto;
+}
+
+.process-step{
+  margin-bottom:48px;
+  animation:fadeInUp 0.6s backwards;
+}
+.process-step:nth-child(1){animation-delay:.1s}
+.process-step:nth-child(2){animation-delay:.2s}
+.process-step:nth-child(3){animation-delay:.3s}
+.process-step:nth-child(4){animation-delay:.4s}
+.process-step:nth-child(5){animation-delay:.5s}
+
+.process-content{
+  background:white;
+  padding:28px;
+  border-radius:16px;
+  box-shadow:var(--shadow-md);
+  border:2px solid var(--border);
+  transition:var(--transition);
+}
+.process-step:hover .process-content{
+  transform:translateX(10px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--gold);
+}
+
+.process-number{
+  width:76px;
+  height:76px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:2rem;
+  font-weight:900;
+  margin:0 auto 16px;
+  transition:var(--transition);
+}
+.process-step:hover .process-number{transform:scale(1.1)}
+
+.process-title{
+  font-size:1.35rem;
+  font-weight:800;
+  color:var(--navy);
+  margin-bottom:12px;
+}
+
+.process-desc{
+  color:var(--muted);
+  line-height:1.7;
+  font-size:.95rem;
+}
+
+/* Testimonials */
+.testimonials{
+  background:linear-gradient(135deg,#f8fafc,#e2e8f0,#f8fafc);
+  padding:60px 24px;
+  border-radius:24px;
+  margin:60px 0;
+}
+
+.testimonial-card{
+  background:white;
+  padding:32px;
+  border-radius:18px;
+  box-shadow:var(--shadow-md);
+  border:2px solid var(--border);
+  margin-bottom:28px;
+  transition:var(--transition);
+  animation:fadeInUp 0.6s backwards;
+}
+.testimonial-card:nth-child(1){animation-delay:.1s}
+.testimonial-card:nth-child(2){animation-delay:.2s}
+.testimonial-card:nth-child(3){animation-delay:.3s}
+
+.testimonial-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-lg);
+}
+
+.testimonial-rating{
+  display:flex;
+  gap:6px;
+  margin-bottom:20px;
+}
+.testimonial-rating i{
+  color:var(--gold);
+  font-size:1.2rem;
+  animation:fadeIn .3s backwards;
+}
+.testimonial-rating i:nth-child(1){animation-delay:.1s}
+.testimonial-rating i:nth-child(2){animation-delay:.2s}
+.testimonial-rating i:nth-child(3){animation-delay:.3s}
+.testimonial-rating i:nth-child(4){animation-delay:.4s}
+.testimonial-rating i:nth-child(5){animation-delay:.5s}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:scale(.8)}
+  to{opacity:1;transform:scale(1)}
+}
+
+.testimonial-text{
+  font-style:italic;
+  color:var(--text);
+  margin-bottom:24px;
+  line-height:1.8;
+  font-size:.95rem;
+}
+
+.testimonial-author{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding-top:20px;
+  border-top:1.5px solid var(--border);
+}
+
+.testimonial-avatar{
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:1.4rem;
+  font-weight:700;
+  flex-shrink:0;
+}
+
+.testimonial-name{
+  font-weight:800;
+  color:var(--navy);
+  font-size:1.05rem;
+  margin-bottom:4px;
+}
+
+.testimonial-role{
+  font-size:.88rem;
+  color:var(--muted);
+}
+
+/* CTA Section */
+.cta-section{
+  background:linear-gradient(135deg,#050b14,#0a1628,#1a2942);
+  color:white;
+  padding:80px 0;
+  position:relative;
+  overflow:hidden;
+}
+.cta-section::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  right:-20%;
+  width:600px;
+  height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(212,165,71,.15),transparent 70%);
+  pointer-events:none;
+}
+
+.cta-content{
+  text-align:center;
+  max-width:860px;
+  margin:0 auto;
+  padding:0 20px;
+  position:relative;
+  z-index:1;
+}
+
+.cta-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.8rem,4.5vw,3.4rem);
+  font-weight:900;
+  margin-bottom:24px;
+  line-height:1.2;
+}
+
+.cta-subtitle{
+  font-size:clamp(.95rem,2vw,1.25rem);
+  margin-bottom:36px;
+  line-height:1.7;
+}
+
+.cta-buttons{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* Contact Section */
 .contact-grid{display:grid;gap:40px}
-.contact-card{background:white;padding:36px;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.12);border:2px solid var(--border)}
-.contact-card-title{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:var(--navy);margin-bottom:12px;line-height:1.2}
-label{display:block;font-weight:700;margin-bottom:10px;color:var(--navy);font-size:.92rem}
+
+.contact-card{
+  background:white;
+  padding:36px;
+  border-radius:20px;
+  box-shadow:var(--shadow-lg);
+  border:2px solid var(--border);
+}
+
+.contact-card-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.9rem;
+  font-weight:900;
+  color:var(--navy);
+  margin-bottom:12px;
+  line-height:1.2;
+}
+
+label{
+  display:block;
+  font-weight:700;
+  margin-bottom:10px;
+  color:var(--navy);
+  font-size:.92rem;
+}
 label span{color:#dc2626}
-input,textarea,select{width:100%;padding:14px 18px;border-radius:12px;border:2px solid var(--border);font-size:.95rem;font-family:inherit;transition:all .3s}
-input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,165,71,.1)}
-textarea{min-height:180px;resize:vertical}
-.form-row{display:grid;gap:24px;margin-bottom:24px}
+
+input,textarea,select{
+  width:100%;
+  padding:14px 18px;
+  border-radius:12px;
+  border:2px solid var(--border);
+  font-size:.95rem;
+  font-family:inherit;
+  transition:var(--transition);
+  background:white;
+}
+input:hover,textarea:hover,select:hover{border-color:#cbd5e1}
+input:focus,textarea:focus,select:focus{
+  outline:none;
+  border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(212,165,71,.1);
+}
+
+textarea{
+  min-height:180px;
+  resize:vertical;
+}
+
+.form-row{
+  display:grid;
+  gap:24px;
+  margin-bottom:24px;
+}
+
 .form-group{margin-bottom:24px}
-.btn-submit{background:linear-gradient(135deg,var(--gold),#e8c875);color:var(--navy);padding:16px 36px;border-radius:12px;font-weight:800;font-size:1.02rem;cursor:pointer;border:none;width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:all .3s}
+
+.btn-submit{
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:var(--navy);
+  padding:16px 36px;
+  border-radius:12px;
+  font-weight:800;
+  font-size:1.02rem;
+  cursor:pointer;
+  border:none;
+  width:100%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  transition:var(--transition);
+  box-shadow:var(--shadow-sm);
+}
+.btn-submit:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
 .btn-submit:active{transform:scale(.98)}
-.form-message{padding:18px 24px;border-radius:12px;margin-top:24px;font-weight:600;font-size:.92rem}
-.form-message.success{background:#d1fae5;color:#065f46;border:2px solid #a7f3d0}
+.btn-submit:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+  transform:none;
+}
 
-.contact-info-card{background:linear-gradient(135deg,#050b14,#0a1628);color:white;padding:36px;border-radius:20px}
-.contact-info-card h3{font-size:1.5rem;margin-bottom:8px}
-.contact-info-item{display:flex;gap:14px;margin-bottom:24px;padding:18px;background:rgba(255,255,255,.1);border-radius:12px}
-.contact-info-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#e8c875,#d4a547);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
-.contact-info-item h4{font-size:1.05rem;margin-bottom:6px}
-.contact-info-item p{font-size:.9rem;opacity:.9;line-height:1.5}
+.form-message{
+  padding:18px 24px;
+  border-radius:12px;
+  margin-top:24px;
+  font-weight:600;
+  font-size:.92rem;
+  animation:fadeInUp .5s;
+}
+.form-message.success{
+  background:#d1fae5;
+  color:#065f46;
+  border:2px solid #a7f3d0;
+}
+.form-message.error{
+  background:#fee2e2;
+  color:#991b1b;
+  border:2px solid #fecaca;
+}
 
-.floating-actions{position:fixed;right:20px;bottom:20px;display:flex;flex-direction:column;gap:16px;z-index:1200}
-.floating-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 8px 24px rgba(0,0,0,.25);font-size:1.4rem;cursor:pointer;transition:all .3s}
+.contact-info-card{
+  background:linear-gradient(135deg,#050b14,#0a1628);
+  color:white;
+  padding:36px;
+  border-radius:20px;
+}
+
+.contact-info-card h3{
+  font-size:1.5rem;
+  margin-bottom:8px;
+}
+
+.contact-info-item{
+  display:flex;
+  gap:14px;
+  margin-bottom:24px;
+  padding:18px;
+  background:rgba(255,255,255,.1);
+  border-radius:12px;
+  transition:var(--transition);
+  cursor:pointer;
+}
+.contact-info-item:hover{
+  background:rgba(255,255,255,.15);
+  transform:translateX(5px);
+}
+
+.contact-info-icon{
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.3rem;
+  flex-shrink:0;
+  color:var(--navy);
+}
+
+.contact-info-item h4{
+  font-size:1.05rem;
+  margin-bottom:6px;
+}
+
+.contact-info-item p{
+  font-size:.9rem;
+  opacity:.9;
+  line-height:1.5;
+}
+
+/* Floating Actions */
+.floating-actions{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  z-index:1200;
+}
+
+.floating-btn{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  box-shadow:var(--shadow-md);
+  font-size:1.4rem;
+  cursor:pointer;
+  transition:var(--transition);
+  animation:fadeIn .5s backwards;
+}
+.floating-btn:nth-child(1){animation-delay:.1s}
+.floating-btn:nth-child(2){animation-delay:.2s}
+.floating-btn:nth-child(3){animation-delay:.3s}
+
+.floating-btn:hover{
+  transform:scale(1.1);
+  box-shadow:var(--shadow-lg);
+}
 .floating-btn:active{transform:scale(.95)}
 .floating-btn.call{background:linear-gradient(135deg,#0ea5a4,#078a89)}
 .floating-btn.ws{background:linear-gradient(135deg,#25d366,#1ea952)}
 .floating-btn.mail{background:linear-gradient(135deg,#2563eb,#1e40af)}
 
-footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#050b14,#0a1628,#050b14);color:rgba(255,255,255,.9)}
-.footer-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;margin-bottom:44px}
-.footer-col h4{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:800;color:#e8c875;margin-bottom:20px}
-.footer-links{display:flex;flex-direction:column;gap:12px}
-.footer-links a{color:rgba(255,255,255,.85);font-weight:500;font-size:.9rem;display:flex;align-items:center;gap:8px;transition:all .3s}
-.footer-links a:hover{color:#e8c875}
-.footer-links i{font-size:.8rem}
-.footer-bottom{padding-top:32px;border-top:1.5px solid rgba(255,255,255,.12);text-align:center;font-size:.88rem}
-.footer-social{display:flex;gap:14px;justify-content:center;margin-top:24px}
-.social-link{width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:white;font-size:1.2rem;transition:all .3s}
-.social-link:hover{background:rgba(255,255,255,.2)}
+/* Back to Top */
+.back-to-top{
+  position:fixed;
+  right:20px;
+  bottom:200px;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:var(--navy);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.2rem;
+  cursor:pointer;
+  opacity:0;
+  visibility:hidden;
+  transition:var(--transition);
+  z-index:1200;
+  box-shadow:var(--shadow-md);
+}
+.back-to-top.visible{
+  opacity:1;
+  visibility:visible;
+}
+.back-to-top:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-lg);
+}
 
+/* Footer */
+footer{
+  margin-top:100px;
+  padding:60px 0 32px;
+  background:linear-gradient(135deg,#050b14,#0a1628,#050b14);
+  color:rgba(255,255,255,.9);
+}
+
+.footer-top{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:40px;
+  margin-bottom:44px;
+}
+
+.footer-col h4{
+  font-family:'Playfair Display',serif;
+  font-size:1.25rem;
+  font-weight:800;
+  color:var(--gold-light);
+  margin-bottom:20px;
+}
+
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.footer-links a{
+  color:rgba(255,255,255,.85);
+  font-weight:500;
+  font-size:.9rem;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  transition:var(--transition);
+}
+.footer-links a:hover{
+  color:var(--gold-light);
+  transform:translateX(3px);
+}
+.footer-links i{font-size:.8rem}
+
+.footer-bottom{
+  padding-top:32px;
+  border-top:1.5px solid rgba(255,255,255,.12);
+  text-align:center;
+  font-size:.88rem;
+}
+
+.footer-social{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  margin-top:24px;
+}
+
+.social-link{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:rgba(255,255,255,.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:1.2rem;
+  transition:var(--transition);
+}
+.social-link:hover{
+  background:rgba(255,255,255,.2);
+  transform:translateY(-3px);
+}
+
+/* Accessibility */
+.sr-only{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border-width:0;
+}
+
+/* Focus Styles */
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:3px solid var(--gold);
+  outline-offset:3px;
+}
+
+/* Responsive Design */
 @media (min-width:1024px){
-.hero-inner{grid-template-columns:1.25fr 1fr}
-.contact-grid{grid-template-columns:1.4fr 1fr}
-.form-row{grid-template-columns:1fr 1fr}
+  .hero-inner{grid-template-columns:1.25fr 1fr}
+  .contact-grid{grid-template-columns:1.4fr 1fr}
+  .form-row{grid-template-columns:1fr 1fr}
 }
 
 @media (max-width:767px){
-.container{padding:0 16px}
-.topbar{flex-direction:column;align-items:flex-start;padding:16px 0;gap:16px}
-.brand{width:100%}
-.brand img{width:50px;height:50px}
-.brand-text h1{font-size:1.15rem}
-.brand-tagline{font-size:.8rem}
-.quick-contacts{width:100%;justify-content:flex-start;gap:10px}
-.contact-pill{padding:8px 12px;font-size:.8rem;flex:1;min-width:0;justify-content:center}
-.contact-pill span{display:none}
-.contact-pill i{font-size:1.2rem}
+  .container{padding:0 16px}
+  
+  .topbar{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:16px 0;
+    gap:16px;
+  }
+  
+  .brand{width:100%}
+  .brand img{width:50px;height:50px}
+  .brand-text h1{font-size:1.15rem}
+  .brand-tagline{font-size:.8rem}
+  
+  .quick-contacts{
+    width:100%;
+    justify-content:flex-start;
+    gap:10px;
+  }
+  
+  .contact-pill{
+    padding:8px 12px;
+    font-size:.8rem;
+    flex:1;
+    min-width:0;
+    justify-content:center;
+  }
+  .contact-pill span{display:none}
+  .contact-pill i{font-size:1.2rem}
+  
+  .burger{display:block}
+  
+  .nav-inner{padding:12px 0}
+  .nav-brand img{width:36px;height:36px}
+  .nav-brand span{font-size:.95rem}
+  
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:rgba(10,22,40,.98);
+    padding:24px 16px;
+    gap:8px;
+    box-shadow:0 8px 24px rgba(0,0,0,.3);
+  }
+  .nav-links.active{display:flex}
+  .nav-links a{
+    width:100%;
+    padding:12px 16px;
+    text-align:center;
+  }
+  .nav-links a::after{display:none}
+  .cta-primary{justify-content:center}
+  
+  .hero{padding:60px 0 50px}
+  .hero-inner{
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+  .hero-actions{
+    flex-direction:column;
+    gap:12px;
+  }
+  .btn{
+    width:100%;
+    justify-content:center;
+  }
+  .hero-stats{
+    flex-direction:column;
+    gap:16px;
+  }
+  .hero-stat{width:100%}
+  .hero-card{padding:24px}
+  
+  .section{padding:60px 0}
+  .cards{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .testimonials{padding:40px 16px}
+  .cta-buttons{flex-direction:column}
+  .contact-grid{grid-template-columns:1fr}
+  
+  .floating-actions{
+    right:16px;
+    bottom:16px;
+  }
+  .floating-btn{
+    width:52px;
+    height:52px;
+  }
+  
+  .back-to-top{
+    right:16px;
+    bottom:180px;
+  }
+}
 
-.burger{display:block}
-.nav-inner{padding:12px 0}
-.nav-brand img{width:36px;height:36px}
-.nav-brand span{font-size:.95rem}
-.nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(10,22,40,.98);padding:24px 16px;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
-.nav-links.active{display:flex}
-.nav-links a{width:100%;padding:12px 16px;text-align:center}
-.cta-primary{justify-content:center}
+/* Print Styles */
+@media print{
+  .preloader,.announcement-bar,nav,.floating-actions,.back-to-top,footer{display:none}
+  .hero{background:white;color:var(--text)}
+  .section{page-break-inside:avoid}
+}
 
-.hero{padding:60px 0 50px}
-.hero-inner{grid-template-columns:1fr;gap:32px}
-.hero-actions{flex-direction:column;gap:12px}
-.btn{width:100%;justify-content:center}
-.hero-stats{flex-direction:column;gap:16px}
-.hero-stat{width:100%}
-.hero-card{padding:24px}
-
-.section{padding:60px 0}
-.cards{grid-template-columns:1fr}
-.why-grid{grid-template-columns:1fr}
-.testimonials{padding:40px 16px}
-.cta-buttons{flex-direction:column}
-.contact-grid{grid-template-columns:1fr}
-.floating-actions{right:16px;bottom:16px}
-.floating-btn{width:52px;height:52px}
+/* Reduced Motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
 }
 </style>
 </head>
 <body>
 
-<div class="preloader" id="preloader">
+<div class="preloader" id="preloader" role="status" aria-label="Loading">
   <div class="preloader-content">
-    <div class="preloader-logo"><i class="fas fa-graduation-cap"></i></div>
+    <div class="preloader-logo"><i class="fas fa-graduation-cap" aria-hidden="true"></i></div>
     <div class="preloader-text">Melvis Academic</div>
+    <span class="sr-only">Loading website...</span>
   </div>
 </div>
 
-<div class="announcement-bar">
-  <i class="fas fa-bolt"></i> <strong>Limited Time:</strong> Get 20% off on all thesis coaching!
+<div class="announcement-bar" role="banner">
+  <i class="fas fa-bolt" aria-hidden="true"></i> <strong>Limited Time:</strong> Get 20% off on all thesis coaching!
 </div>
 
 <header>
   <div class="container topbar">
-    <a href="javascript:void(0)" onclick="showPage('home')" class="brand">
-      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=200&q=80" alt="Melvis"/>
+    <a href="javascript:void(0)" onclick="showPage('home')" class="brand" aria-label="Melvis Academic Consult - Home">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=200&q=80" alt="Melvis Academic Consult Logo"/>
       <div class="brand-text">
         <h1>Melvis Academic Consult</h1>
         <div class="brand-tagline">Quality Research. Professional Guidance.</div>
       </div>
     </a>
     <div class="quick-contacts">
-      <a href="https://wa.me/233598655277" class="contact-pill" target="_blank">
-        <i class="fab fa-whatsapp" style="color:#25d366"></i>
+      <a href="https://wa.me/233598655277" class="contact-pill" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp +233 59 865 5277">
+        <i class="fab fa-whatsapp" style="color:#25d366" aria-hidden="true"></i>
         <span>+233 59 865 5277</span>
       </a>
-      <a href="tel:+233543598656" class="contact-pill">
-        <i class="fas fa-phone"></i>
+      <a href="tel:+233543598656" class="contact-pill" aria-label="Call +233 54 359 8656">
+        <i class="fas fa-phone" aria-hidden="true"></i>
         <span>+233 54 359 8656</span>
       </a>
-      <a href="mailto:melvisongod@gmail.com" class="contact-pill">
-        <i class="fas fa-envelope"></i>
+      <a href="mailto:melvisongod@gmail.com" class="contact-pill" aria-label="Email melvisongod@gmail.com">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
         <span>melvisongod@gmail.com</span>
       </a>
     </div>
   </div>
 
-  <nav>
+  <nav role="navigation" aria-label="Main navigation">
     <div class="container nav-inner">
       <div class="nav-brand">
-        <button id="burger" class="burger"><i class="fas fa-bars"></i></button>
-        <a href="javascript:void(0)" onclick="showPage('home')">
-          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=80&q=60" alt="M"/>
+        <button id="burger" class="burger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <a href="javascript:void(0)" onclick="showPage('home')" aria-label="Melvis Academic - Home">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=80&q=60" alt=""/>
           <span>Melvis Academic</span>
         </a>
       </div>
-      <div class="nav-links" id="navLinks">
-        <a href="javascript:void(0)" onclick="showPage('home')" data-page="home" class="active">Home</a>
-        <a href="javascript:void(0)" onclick="showPage('services')" data-page="services">Services</a>
-        <a href="javascript:void(0)" onclick="showPage('why')" data-page="why">Why Us</a>
-        <a href="javascript:void(0)" onclick="showPage('process')" data-page="process">Process</a>
-        <a href="javascript:void(0)" onclick="showPage('testimonials')" data-page="testimonials">Reviews</a>
-        <a href="javascript:void(0)" onclick="showPage('contact')" data-page="contact">Contact</a>
-        <a href="https://wa.me/233598655277" target="_blank" class="cta-primary">
-          <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+      <div class="nav-links" id="navLinks" role="menubar">
+        <a href="javascript:void(0)" onclick="showPage('home')" data-page="home" class="active" role="menuitem">Home</a>
+        <a href="javascript:void(0)" onclick="showPage('services')" data-page="services" role="menuitem">Services</a>
+        <a href="javascript:void(0)" onclick="showPage('why')" data-page="why" role="menuitem">Why Us</a>
+        <a href="javascript:void(0)" onclick="showPage('process')" data-page="process" role="menuitem">Process</a>
+        <a href="javascript:void(0)" onclick="showPage('testimonials')" data-page="testimonials" role="menuitem">Reviews</a>
+        <a href="javascript:void(0)" onclick="showPage('contact')" data-page="contact" role="menuitem">Contact</a>
+        <a href="https://wa.me/233598655277" target="_blank" rel="noopener noreferrer" class="cta-primary" role="menuitem">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> <span>WhatsApp</span>
         </a>
       </div>
     </div>
   </nav>
 </header>
 
-<main>
+<main id="main-content">
 
 <div id="home-page" class="page-content active">
   <section class="hero">
@@ -279,26 +1379,26 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
         <h2 class="hero-title">Your Trusted Partner for Thesis, Dissertations & Research Success</h2>
         <p class="hero-sub">End-to-end academic services including proposal development, data analysis (SPSS/STATA/NVivo), literature review, proofreading and formatting.</p>
         <div class="hero-actions">
-          <a class="btn btn-ws" href="https://wa.me/233598655277" target="_blank">
-            <i class="fab fa-whatsapp"></i> WhatsApp Now
+          <a class="btn btn-ws" href="https://wa.me/233598655277" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Now
           </a>
           <a class="btn btn-ghost" href="tel:+233543598656">
-            <i class="fas fa-phone"></i> Call Us
+            <i class="fas fa-phone" aria-hidden="true"></i> Call Us
           </a>
           <a class="btn btn-accent" href="javascript:void(0)" onclick="showPage('contact')">
-            <i class="fas fa-envelope"></i> Email
+            <i class="fas fa-envelope" aria-hidden="true"></i> Email
           </a>
         </div>
         <div class="hero-stats">
           <div class="hero-stat">
-            <div class="hero-stat-icon"><i class="fas fa-users"></i></div>
+            <div class="hero-stat-icon"><i class="fas fa-users" aria-hidden="true"></i></div>
             <div class="hero-stat-content">
               <h4>500+</h4>
               <p>Happy Clients</p>
             </div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-icon"><i class="fas fa-award"></i></div>
+            <div class="hero-stat-icon"><i class="fas fa-award" aria-hidden="true"></i></div>
             <div class="hero-stat-content">
               <h4>98%</h4>
               <p>Success Rate</p>
@@ -310,33 +1410,27 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
       <aside class="hero-card">
         <h4>Instant Response Options</h4>
         <p class="hero-card-subtitle">Choose an option below for quick support.</p>
-        <div class="contact-row">
-          <i class="fab fa-whatsapp" style="color:#25d366"></i>
+        <a href="https://wa.me/233598655277" target="_blank" rel="noopener noreferrer" class="contact-row">
+          <i class="fab fa-whatsapp" style="color:#25d366" aria-hidden="true"></i>
           <div>
-            <div class="contact-row-title">
-              <a href="https://wa.me/233598655277" target="_blank">+233 59 865 5277</a>
-            </div>
+            <div class="contact-row-title">+233 59 865 5277</div>
             <div class="contact-row-subtitle">Tap to message instantly</div>
           </div>
-        </div>
-        <div class="contact-row">
-          <i class="fas fa-phone" style="color:#0ea5a4"></i>
+        </a>
+        <a href="tel:+233543598656" class="contact-row">
+          <i class="fas fa-phone" style="color:#0ea5a4" aria-hidden="true"></i>
           <div>
-            <div class="contact-row-title">
-              <a href="tel:+233543598656">+233 54 359 8656</a>
-            </div>
+            <div class="contact-row-title">+233 54 359 8656</div>
             <div class="contact-row-subtitle">Quick voice consultation</div>
           </div>
-        </div>
-        <div class="contact-row">
-          <i class="fas fa-envelope" style="color:#2563eb"></i>
+        </a>
+        <a href="mailto:melvisongod@gmail.com" class="contact-row">
+          <i class="fas fa-envelope" style="color:#2563eb" aria-hidden="true"></i>
           <div>
-            <div class="contact-row-title">
-              <a href="mailto:melvisongod@gmail.com">melvisongod@gmail.com</a>
-            </div>
+            <div class="contact-row-title">melvisongod@gmail.com</div>
             <div class="contact-row-subtitle">Attach documents</div>
           </div>
-        </div>
+        </a>
       </aside>
     </div>
   </section>
@@ -351,66 +1445,66 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
         <p class="section-desc">We deliver tailored research support for students, scholars and institutions — fast, confidential and academically rigorous.</p>
       </div>
       <div class="cards">
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-book-open"></i></div>
+        <article class="card">
+          <div class="card-icon"><i class="fas fa-book-open" aria-hidden="true"></i></div>
           <h3>Thesis & Dissertation Coaching</h3>
           <p>From topic selection to defense preparation — comprehensive supervision, timeline management and milestone tracking.</p>
           <ul class="feature-list">
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Proposal development & methodology</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Research design & planning</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Defense preparation coaching</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Proposal development & methodology</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Research design & planning</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Defense preparation coaching</li>
           </ul>
-        </div>
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-spell-check"></i></div>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fas fa-spell-check" aria-hidden="true"></i></div>
           <h3>Proofreading & Academic Editing</h3>
           <p>Language polish, structural edits, referencing (APA/MLA/Chicago/Harvard) and professional formatting.</p>
           <ul class="feature-list">
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Grammar & clarity enhancement</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Citation & reference formatting</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Plagiarism guidance & checks</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Grammar & clarity enhancement</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Citation & reference formatting</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Plagiarism guidance & checks</li>
           </ul>
-        </div>
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-chart-bar"></i></div>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fas fa-chart-bar" aria-hidden="true"></i></div>
           <h3>Data Analysis & Visualization</h3>
           <p>Expert analysis using SPSS, STATA, R, Python, SAS, NVivo, EViews and Excel — quantitative & qualitative methods.</p>
           <ul class="feature-list">
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Descriptive & inferential statistics</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Professional tables & charts</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Results interpretation & reporting</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Descriptive & inferential statistics</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Professional tables & charts</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Results interpretation & reporting</li>
           </ul>
-        </div>
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fas fa-file-alt" aria-hidden="true"></i></div>
           <h3>Research Proposal Development</h3>
           <p>Problem-driven proposals tailored to institutional guidelines, funding calls and academic standards.</p>
           <ul class="feature-list">
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Literature gap identification</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Clear objectives & methodology</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Budget & timeline planning</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Literature gap identification</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Clear objectives & methodology</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Budget & timeline planning</li>
           </ul>
-        </div>
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i></div>
           <h3>Academic Workshops & Training</h3>
           <p>Professional workshops on research methods, academic writing, referencing and data handling.</p>
           <ul class="feature-list">
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Customized training programs</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Interactive sessions</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Certificate of completion</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Customized training programs</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Interactive sessions</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Certificate of completion</li>
           </ul>
-        </div>
-        <div class="card">
-          <div class="card-icon"><i class="fas fa-search"></i></div>
+        </article>
+        <article class="card">
+          <div class="card-icon"><i class="fas fa-search" aria-hidden="true"></i></div>
           <h3>Literature Review Services</h3>
           <p>Comprehensive literature reviews with critical analysis, synthesis and gap identification.</p>
           <ul class="feature-list">
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Systematic literature search</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Critical analysis & synthesis</li>
-            <li><i class="fas fa-check" style="color:var(--gold)"></i> Research gap identification</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Systematic literature search</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Critical analysis & synthesis</li>
+            <li><i class="fas fa-check" style="color:var(--gold)" aria-hidden="true"></i> Research gap identification</li>
           </ul>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -425,36 +1519,36 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
         <p class="section-desc">We combine academic excellence with personalized support to ensure your research success.</p>
       </div>
       <div class="why-grid">
-        <div class="why-item">
-          <div class="why-icon"><i class="fas fa-user-tie"></i></div>
+        <article class="why-item">
+          <div class="why-icon"><i class="fas fa-user-tie" aria-hidden="true"></i></div>
           <h3 class="why-title">Expert Consultants</h3>
           <p class="why-desc">Ph.D. holders and experienced researchers with deep subject matter expertise across multiple disciplines.</p>
-        </div>
-        <div class="why-item">
-          <div class="why-icon"><i class="fas fa-tachometer-alt"></i></div>
+        </article>
+        <article class="why-item">
+          <div class="why-icon"><i class="fas fa-tachometer-alt" aria-hidden="true"></i></div>
           <h3 class="why-title">Fast Turnaround</h3>
           <p class="why-desc">24-hour response time with flexible deadlines to accommodate urgent academic requirements.</p>
-        </div>
-        <div class="why-item">
-          <div class="why-icon"><i class="fas fa-lock"></i></div>
+        </article>
+        <article class="why-item">
+          <div class="why-icon"><i class="fas fa-lock" aria-hidden="true"></i></div>
           <h3 class="why-title">100% Confidential</h3>
           <p class="why-desc">Strict privacy protocols ensure your personal information and research remain completely confidential.</p>
-        </div>
-        <div class="why-item">
-          <div class="why-icon"><i class="fas fa-certificate"></i></div>
+        </article>
+        <article class="why-item">
+          <div class="why-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
           <h3 class="why-title">Quality Guaranteed</h3>
           <p class="why-desc">Rigorous quality checks and unlimited revisions until you're completely satisfied with the results.</p>
-        </div>
-        <div class="why-item">
-          <div class="why-icon"><i class="fas fa-comments"></i></div>
+        </article>
+        <article class="why-item">
+          <div class="why-icon"><i class="fas fa-comments" aria-hidden="true"></i></div>
           <h3 class="why-title">24/7 Support</h3>
           <p class="why-desc">Always available via WhatsApp, phone, or email to answer questions and provide guidance.</p>
-        </div>
-        <div class="why-item">
-          <div class="why-icon"><i class="fas fa-money-bill-wave"></i></div>
+        </article>
+        <article class="why-item">
+          <div class="why-icon"><i class="fas fa-money-bill-wave" aria-hidden="true"></i></div>
           <h3 class="why-title">Affordable Pricing</h3>
           <p class="why-desc">Competitive rates with flexible payment plans designed for student budgets.</p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -469,41 +1563,41 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
         <p class="section-desc">A simple, transparent process from initial contact to final delivery.</p>
       </div>
       <div class="process-timeline">
-        <div class="process-step">
+        <article class="process-step">
           <div class="process-number">1</div>
           <div class="process-content">
             <h4 class="process-title">Contact Us</h4>
             <p class="process-desc">Reach out via WhatsApp, phone, or email with your project details and requirements.</p>
           </div>
-        </div>
-        <div class="process-step">
+        </article>
+        <article class="process-step">
           <div class="process-number">2</div>
           <div class="process-content">
             <h4 class="process-title">Get Quote</h4>
             <p class="process-desc">Receive a detailed quote within 24 hours outlining scope, timeline, and pricing.</p>
           </div>
-        </div>
-        <div class="process-step">
+        </article>
+        <article class="process-step">
           <div class="process-number">3</div>
           <div class="process-content">
             <h4 class="process-title">Begin Work</h4>
             <p class="process-desc">After agreement, our experts start working on your project with regular updates.</p>
           </div>
-        </div>
-        <div class="process-step">
+        </article>
+        <article class="process-step">
           <div class="process-number">4</div>
           <div class="process-content">
             <h4 class="process-title">Review & Revise</h4>
             <p class="process-desc">Review the deliverable and request any revisions needed for perfection.</p>
           </div>
-        </div>
-        <div class="process-step">
+        </article>
+        <article class="process-step">
           <div class="process-number">5</div>
           <div class="process-content">
             <h4 class="process-title">Final Delivery</h4>
             <p class="process-desc">Receive your polished, ready-to-submit work with all necessary documentation.</p>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -518,45 +1612,57 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
         <p class="section-desc">Read testimonials from students who achieved academic success with our support.</p>
       </div>
       <div class="testimonials">
-        <div class="testimonial-card">
-          <div class="testimonial-rating">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        <article class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 star rating">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
           </div>
           <p class="testimonial-text">Melvis Academic Consult helped me complete my thesis on time with exceptional SPSS analysis. Their attention to detail and quick responses made all the difference. Highly recommended!</p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">AK</div>
+            <div class="testimonial-avatar" aria-hidden="true">AK</div>
             <div>
               <div class="testimonial-name">Akosua Kwarteng</div>
               <div class="testimonial-role">MBA Graduate, KNUST</div>
             </div>
           </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-rating">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 star rating">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
           </div>
           <p class="testimonial-text">The proofreading and formatting service was outstanding. They transformed my dissertation into a polished, professional document. The team is knowledgeable and very supportive.</p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">KA</div>
+            <div class="testimonial-avatar" aria-hidden="true">KA</div>
             <div>
               <div class="testimonial-name">Kwame Asante</div>
               <div class="testimonial-role">PhD Candidate, UG</div>
             </div>
           </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-rating">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </article>
+        <article class="testimonial-card">
+          <div class="testimonial-rating" aria-label="5 star rating">
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
+            <i class="fas fa-star" aria-hidden="true"></i>
           </div>
           <p class="testimonial-text">I was struggling with my research proposal until I found Melvis. They guided me through every step and my proposal was approved on first submission. Thank you!</p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">EA</div>
+            <div class="testimonial-avatar" aria-hidden="true">EA</div>
             <div>
               <div class="testimonial-name">Esi Agyemang</div>
               <div class="testimonial-role">Masters Student, UCC</div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
@@ -573,73 +1679,73 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
       <div class="contact-grid">
         <div class="contact-card">
           <h3 class="contact-card-title">Send Us A Message</h3>
-          <form id="contactForm">
+          <form id="contactForm" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label>Full Name <span>*</span></label>
-                <input type="text" required placeholder="Enter your full name"/>
+                <label for="fullName">Full Name <span>*</span></label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name" autocomplete="name"/>
               </div>
               <div class="form-group">
-                <label>Email Address <span>*</span></label>
-                <input type="email" required placeholder="your@email.com"/>
+                <label for="email">Email Address <span>*</span></label>
+                <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email"/>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label>Phone Number</label>
-                <input type="tel" placeholder="+233 XX XXX XXXX"/>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+233 XX XXX XXXX" autocomplete="tel"/>
               </div>
               <div class="form-group">
-                <label>Service Needed <span>*</span></label>
-                <select required>
+                <label for="service">Service Needed <span>*</span></label>
+                <select id="service" name="service" required>
                   <option value="">Select a service</option>
-                  <option>Thesis & Dissertation Coaching</option>
-                  <option>Proofreading & Editing</option>
-                  <option>Data Analysis</option>
-                  <option>Research Proposal</option>
-                  <option>Literature Review</option>
-                  <option>Workshops & Training</option>
-                  <option>Other</option>
+                  <option value="thesis">Thesis & Dissertation Coaching</option>
+                  <option value="proofreading">Proofreading & Editing</option>
+                  <option value="data">Data Analysis</option>
+                  <option value="proposal">Research Proposal</option>
+                  <option value="literature">Literature Review</option>
+                  <option value="workshop">Workshops & Training</option>
+                  <option value="other">Other</option>
                 </select>
               </div>
             </div>
             <div class="form-group">
-              <label>Project Details <span>*</span></label>
-              <textarea required placeholder="Please describe your project requirements, deadlines, and any specific needs..."></textarea>
+              <label for="message">Project Details <span>*</span></label>
+              <textarea id="message" name="message" required placeholder="Please describe your project requirements, deadlines, and any specific needs..."></textarea>
             </div>
             <button type="submit" class="btn-submit">
-              <i class="fas fa-paper-plane"></i> Send Message
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
             </button>
-            <div id="formMessage"></div>
+            <div id="formMessage" role="alert" aria-live="polite"></div>
           </form>
         </div>
 
         <div class="contact-info-card">
           <h3>Contact Information</h3>
           <p style="margin-bottom:32px">Prefer to reach out directly? Use any of these channels for instant support.</p>
-          <div class="contact-info-item">
-            <div class="contact-info-icon"><i class="fab fa-whatsapp"></i></div>
+          <a href="https://wa.me/233598655277" target="_blank" rel="noopener noreferrer" class="contact-info-item">
+            <div class="contact-info-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
             <div>
               <h4>WhatsApp</h4>
-              <p><a href="https://wa.me/233598655277" target="_blank">+233 59 865 5277</a></p>
+              <p>+233 59 865 5277</p>
             </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+          </a>
+          <a href="tel:+233543598656" class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
             <div>
               <h4>Phone</h4>
-              <p><a href="tel:+233543598656">+233 54 359 8656</a></p>
+              <p>+233 54 359 8656</p>
             </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+          </a>
+          <a href="mailto:melvisongod@gmail.com" class="contact-info-item">
+            <div class="contact-info-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
             <div>
               <h4>Email</h4>
-              <p><a href="mailto:melvisongod@gmail.com">melvisongod@gmail.com</a></p>
+              <p>melvisongod@gmail.com</p>
             </div>
-          </div>
-          <div class="contact-info-item">
-            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          </a>
+          <div class="contact-info-item" style="cursor:default">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
             <div>
               <h4>Location</h4>
               <p>Okorase State Housing<br>Koforidua, Eastern Region, Ghana</p>
@@ -654,10 +1760,20 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
 </main>
 
 <div class="floating-actions">
-  <a href="tel:+233543598656" class="floating-btn call"><i class="fas fa-phone"></i></a>
-  <a href="https://wa.me/233598655277" target="_blank" class="floating-btn ws"><i class="fab fa-whatsapp"></i></a>
-  <a href="mailto:melvisongod@gmail.com" class="floating-btn mail"><i class="fas fa-envelope"></i></a>
+  <a href="tel:+233543598656" class="floating-btn call" aria-label="Call us">
+    <i class="fas fa-phone" aria-hidden="true"></i>
+  </a>
+  <a href="https://wa.me/233598655277" target="_blank" rel="noopener noreferrer" class="floating-btn ws" aria-label="WhatsApp us">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+  <a href="mailto:melvisongod@gmail.com" class="floating-btn mail" aria-label="Email us">
+    <i class="fas fa-envelope" aria-hidden="true"></i>
+  </a>
 </div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
 
 <footer>
   <div class="container">
@@ -668,39 +1784,39 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
           Your trusted partner for academic excellence. We provide comprehensive research support services to students, scholars and institutions.
         </p>
         <div class="footer-social">
-          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
         <div class="footer-links">
-          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Our Services</a>
-          <a href="javascript:void(0)" onclick="showPage('why')"><i class="fas fa-chevron-right"></i> Why Choose Us</a>
-          <a href="javascript:void(0)" onclick="showPage('process')"><i class="fas fa-chevron-right"></i> Our Process</a>
-          <a href="javascript:void(0)" onclick="showPage('testimonials')"><i class="fas fa-chevron-right"></i> Testimonials</a>
-          <a href="javascript:void(0)" onclick="showPage('contact')"><i class="fas fa-chevron-right"></i> Contact Us</a>
+          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Our Services</a>
+          <a href="javascript:void(0)" onclick="showPage('why')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Why Choose Us</a>
+          <a href="javascript:void(0)" onclick="showPage('process')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Our Process</a>
+          <a href="javascript:void(0)" onclick="showPage('testimonials')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Testimonials</a>
+          <a href="javascript:void(0)" onclick="showPage('contact')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Contact Us</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <div class="footer-links">
-          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Thesis Coaching</a>
-          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Data Analysis</a>
-          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Proofreading</a>
-          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Research Proposals</a>
-          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right"></i> Literature Reviews</a>
+          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Thesis Coaching</a>
+          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Data Analysis</a>
+          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Proofreading</a>
+          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Research Proposals</a>
+          <a href="javascript:void(0)" onclick="showPage('services')"><i class="fas fa-chevron-right" aria-hidden="true"></i> Literature Reviews</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Contact Us</h4>
         <div class="footer-links">
-          <a href="https://wa.me/233598655277" target="_blank"><i class="fab fa-whatsapp"></i> +233 59 865 5277</a>
-          <a href="tel:+233543598656"><i class="fas fa-phone"></i> +233 54 359 8656</a>
-          <a href="mailto:melvisongod@gmail.com"><i class="fas fa-envelope"></i> melvisongod@gmail.com</a>
-          <a href="javascript:void(0)" onclick="showPage('contact')"><i class="fas fa-map-marker-alt"></i> Okorase State Housing</a>
+          <a href="https://wa.me/233598655277" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> +233 59 865 5277</a>
+          <a href="tel:+233543598656"><i class="fas fa-phone" aria-hidden="true"></i> +233 54 359 8656</a>
+          <a href="mailto:melvisongod@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> melvisongod@gmail.com</a>
+          <a href="javascript:void(0)" onclick="showPage('contact')"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Okorase State Housing</a>
         </div>
       </div>
     </div>
@@ -712,38 +1828,160 @@ footer{margin-top:100px;padding:60px 0 32px;background:linear-gradient(135deg,#0
 </footer>
 
 <script>
-window.addEventListener('load',()=>{
-setTimeout(()=>{document.getElementById('preloader').classList.add('hidden')},1500)
+// Preloader
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('preloader').classList.add('hidden');
+  }, 1500);
 });
 
-const burger=document.getElementById('burger');
-const navLinks=document.getElementById('navLinks');
-burger.addEventListener('click',()=>{
-navLinks.classList.toggle('active');
-const icon=burger.querySelector('i');
-icon.classList.toggle('fa-bars');
-icon.classList.toggle('fa-times');
+// Mobile Navigation
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+
+burger.addEventListener('click', () => {
+  const isExpanded = navLinks.classList.contains('active');
+  navLinks.classList.toggle('active');
+  burger.setAttribute('aria-expanded', !isExpanded);
+  
+  const icon = burger.querySelector('i');
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-times');
 });
 
-function showPage(pageName){
-document.querySelectorAll('.page-content').forEach(page=>page.classList.remove('active'));
-document.getElementById(pageName+'-page').classList.add('active');
-document.querySelectorAll('.nav-links a[data-page]').forEach(link=>link.classList.remove('active'));
-document.querySelector(`.nav-links a[data-page="${pageName}"]`)?.classList.add('active');
-navLinks.classList.remove('active');
-burger.querySelector('i').classList.add('fa-bars');
-burger.querySelector('i').classList.remove('fa-times');
-window.scrollTo({top:0,behavior:'smooth'});
+// Page Navigation
+function showPage(pageName) {
+  // Hide all pages
+  document.querySelectorAll('.page-content').forEach(page => {
+    page.classList.remove('active');
+  });
+  
+  // Show selected page
+  const selectedPage = document.getElementById(pageName + '-page');
+  if (selectedPage) {
+    selectedPage.classList.add('active');
+  }
+  
+  // Update active nav link
+  document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+    link.classList.remove('active');
+  });
+  const activeLink = document.querySelector(`.nav-links a[data-page="${pageName}"]`);
+  if (activeLink) {
+    activeLink.classList.add('active');
+  }
+  
+  // Close mobile menu
+  navLinks.classList.remove('active');
+  burger.setAttribute('aria-expanded', 'false');
+  burger.querySelector('i').classList.add('fa-bars');
+  burger.querySelector('i').classList.remove('fa-times');
+  
+  // Scroll to top smoothly
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-const contactForm=document.getElementById('contactForm');
-const formMessage=document.getElementById('formMessage');
-contactForm.addEventListener('submit',function(e){
-e.preventDefault();
-formMessage.innerHTML='<div class="form-message success"><strong>✓ Thank you!</strong><br>Your message has been received. We\'ll respond within 24 hours.</div>';
-contactForm.reset();
-setTimeout(()=>{formMessage.innerHTML=''},10000);
+// Contact Form
+const contactForm = document.getElementById('contactForm');
+const formMessage = document.getElementById('formMessage');
+
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Basic validation
+  const fullName = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const service = document.getElementById('service').value;
+  const message = document.getElementById('message').value.trim();
+  
+  if (!fullName || !email || !service || !message) {
+    formMessage.innerHTML = '<div class="form-message error"><strong>⚠ Error!</strong><br>Please fill in all required fields.</div>';
+    return;
+  }
+  
+  // Email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    formMessage.innerHTML = '<div class="form-message error"><strong>⚠ Error!</strong><br>Please enter a valid email address.</div>';
+    return;
+  }
+  
+  // Success message
+  formMessage.innerHTML = '<div class="form-message success"><strong>✓ Thank you!</strong><br>Your message has been received. We\'ll respond within 24 hours.</div>';
+  contactForm.reset();
+  
+  // Clear message after 10 seconds
+  setTimeout(() => {
+    formMessage.innerHTML = '';
+  }, 10000);
+});
+
+// Back to Top Button
+const backToTop = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && href !== 'javascript:void(0)') {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
+
+// Accessibility: Skip to main content
+document.addEventListener('DOMContentLoaded', () => {
+  const skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.textContent = 'Skip to main content';
+  skipLink.className = 'sr-only';
+  skipLink.style.cssText = `
+    position: absolute;
+    left: -9999px;
+    z-index: 999;
+    padding: 1em;
+    background: var(--gold);
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 700;
+  `;
+  skipLink.addEventListener('focus', () => {
+    skipLink.style.left = '0';
+  });
+  skipLink.addEventListener('blur', () => {
+    skipLink.style.left = '-9999px';
+  });
+  document.body.insertBefore(skipLink, document.body.firstChild);
+});
+
+// Form field enhancement
+const inputs = document.querySelectorAll('input, textarea, select');
+inputs.forEach(input => {
+  input.addEventListener('invalid', (e) => {
+    e.preventDefault();
+    input.classList.add('error');
+  });
+  
+  input.addEventListener('input', () => {
+    input.classList.remove('error');
+  });
 });
 </script>
 </body>
-</html
+</html>
